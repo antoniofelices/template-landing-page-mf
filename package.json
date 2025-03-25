@@ -1,0 +1,13 @@
+{
+	"name": "template-landing-page-mf",
+	"description": "A landing page. Three versiones: Vainilla, Sass, TailwindCSS",
+	"version": "0.0.1",
+	"license": "GPL-3.0-or-later",
+	"scripts": {
+		"start": "gulp"
+	},
+	"devDependencies": {
+		"gulp": "^5.0.0",
+		"gulp-concat": "^2.6.1"
+	}
+}
