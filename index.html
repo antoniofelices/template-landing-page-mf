@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <meta name="author" content="antonio felices">
+    <meta name="description" content="A landing page">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32">
+    <link href="/assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <header id="main-header" class="mf-wrapper mf-flex mf-justify-space-between mf-padding-block-10">
+        <div class="site-icon">
+            <a href="/" arial-label="link to frontpage"><img src="/assets/images/logo-bookmark.svg" alt="logo bookmark"></a>
+        </div>
+        <nav id="header-nav" class="main-menu">
+            <ul class="mf-flex mf-lg-justify-space-between mf-flex-column mf-lg-flex-row mf-text-transform-uppercase">
+                <li><a href="#">Featured</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="mf-wrapper">
+        <section class="mf-grid mf-grid-2 mf-gap-7 mf-lg-align-center mf-padding-block-10">
+            <div>
+                <h1 class="mf-font-weight-bold mf-color-blue-900 mf-text-align-center mf-lg-text-align-left">A Simple Bookmark Manager</h1>
+                <p class="mf-text-align-center mf-lg-text-align-left mf-margin-block-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus arcu, commodo sit amet mollis quis, euismod nec metus. Praesent sed scelerisque tellus. Integer auctor suscipit purus.</p>
+                <div>
+                    <button class="mf-bg-blue mf-border-radius-base mf-color-white mf-font-size-sm mf-font-weight-bold mf-padding-block-3 mf-padding-inline-6" type="button">Get It On Chrome</button>
+                    <button class="mf-border-radius-base mf-font-size-sm mf-font-weight-bold mf-padding-block-3 mf-padding-inline-6 mf-shadow-0-300" type="button">Get It On Firefox</button>
+                </div>
+            </div>
+            <img src="/assets/images/illustration-hero.svg" alt="">
+        </section>
+        <section class="mf-padding-block-10">
+            <h2 class="mf-font-weight-bold mf-color-blue-900 mf-text-align-center">Features</h2>
+            <p class="mf-text-align-center mf-padding-10 mf-lg-max-width-720 mf-inline-auto">In a mauris interdum, commodo erat ac, consectetur dolor. Duis tempor urna quis tellus sodales tempus. Suspendisse suscipit nisl eu justo pretium fringilla.</p>
+            <nav>
+                <button type="button" data-tab="simple-bookmarking">Simple Bookmarking</button>
+                <button type="button" data-tab="speedy-searching">Speedy Searching</button>
+                <button type="button" data-tab="easy-sharing">Easy Sharing</button>
+            </nav>
+            <div data-tab="simple-bookmarking" class="mf-grid mf-grid-2 mf-gap-7 mf-align-center">
+                <div>
+                    <h3 class="mf-font-weight-bold mf-color-blue-900">Bookmarking in one Click</h3>
+                    <p>Fusce a ligula non mauris auctor ultrices. Integer semper felis a turpis dapibus porta. Integer semper hendrerit sapien.</p>
+                    <button class="mf-bg-blue mf-border-radius-base mf-color-white mf-font-size-sm mf-font-weight-bold mf-padding-block-3 mf-padding-inline-6" type="button">More info</button>
+                </div>
+                <img src="/assets/images/illustration-features-tab-1.svg" alt="backend app">
+            </div>
+            <div data-tab="speedy-searching" class="mf-grid mf-grid-2 mf-gap-7 mf-align-center">
+                <div>
+                    <h3 class="mf-font-weight-bold mf-color-blue-900">Intelligent Search</h3>
+                    <p>Fusce a ligula non mauris auctor ultrices. Integer semper felis a turpis dapibus porta. Integer semper hendrerit sapien.</p>
+                    <button class="mf-bg-blue mf-border-radius-base mf-color-white mf-font-size-sm mf-font-weight-bold mf-padding-block-3 mf-padding-inline-6"  type="button">More info</button>
+                </div>
+                <img src="/assets/images/illustration-features-tab-2.svg" alt="backend app">
+            </div>
+            <div data-tab="easy-sharing" class="mf-grid mf-grid-2 mf-gap-7 mf-align-center">
+                <div>
+                    <h3 class="mf-font-weight-bold mf-color-blue-900">Share your bookmarks</h3>
+                    <p>Fusce a ligula non mauris auctor ultrices. Integer semper felis a turpis dapibus porta. Integer semper hendrerit sapien.</p>
+                    <button class="mf-bg-blue mf-border-radius-base mf-color-white mf-font-size-sm mf-font-weight-bold mf-padding-block-3 mf-padding-inline-6"  type="button">More info</button>
+                </div>
+                <img src="/assets/images/illustration-features-tab-3.svg" alt="backend app">
+            </div>
+        </section>
+        <section class="mf-padding-block-10">
+            <h2 class="mf-font-weight-bold mf-color-blue-900 mf-text-align-center">Download the extension</h2>
+            <p class="mf-text-align-center mf-padding-10 mf-lg-max-width-720 mf-inline-auto">We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
+            <div class="mf-grid mf-grid-3 mf-margin-block-10 mf-gap-9 mf-lg-max-width-960 mf-inline-auto">
+                <div class="mf-bg-white mf-border-radius-base mf-flex mf-flex-column mf-align-center mf-padding-block-10 mf-padding-inline-7 mf-shadow-0-200">
+                    <img src="/assets/images/logo-chrome.svg" height="120" width="120" alt="Logo browser Chrome">
+                    <h3 class="mf-align-center mf-font-size-lg mf-font-weight-bold mf-color-blue-900">Add to Chrome</h3>
+                    <p class="mf-font-size-sm">Minimum version 62</p>
+                    <button class="mf-bg-blue mf-border-radius-base mf-color-white mf-font-size-sm mf-font-weight-bold mf-padding-block-3 mf-padding-inline-6"  type="button">Add to Chrome</button>
+                </div>
+                <div class="mf-bg-white mf-border-radius-base mf-flex mf-flex-column mf-align-center mf-padding-10 mf-shadow-0-200">
+                    <img src="/assets/images/logo-firefox.svg" height="120" width="120" alt="Logo browser Firefox">
+                    <h3 class="mf-align-center mf-font-size-lg mf-font-weight-bold mf-color-blue-900">Add to Firefox</h3>
+                    <p class="mf-font-size-sm">Minimum version 55</p>
+                    <button class="mf-bg-blue mf-border-radius-base mf-color-white mf-font-size-sm mf-font-weight-bold mf-padding-block-3 mf-padding-inline-6" type="button">Add to Firefox</button>
+                </div>
+                <div class="mf-bg-white mf-border-radius-base mf-flex mf-flex-column mf-align-center mf-padding-10 mf-shadow-0-200">
+                    <img src="/assets/images/logo-opera.svg" height="120" width="120" alt="Logo browser Opera">
+                    <h3 class="mf-align-center mf-font-size-lg mf-font-weight-bold mf-color-blue-900">Add to Opera</h3>
+                    <p class="mf-font-size-sm">Minimum version 46</p>
+                    <button class="mf-bg-blue mf-border-radius-base mf-color-white mf-font-size-sm mf-font-weight-bold mf-padding-block-3 mf-padding-inline-6" type="button">Add to Firefox</button>
+                </div>
+            </div>
+        </section>
+        <section class="mf-padding-block-10">
+            <h2 class="mf-font-weight-bold mf-color-blue-900 mf-text-align-center">Frequently Asked Questions</h2>
+            <p class="mf-text-align-center mf-padding-10 mf-lg-max-width-720 mf-inline-auto">Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us,</p>
+            <div class="mf-lg-max-width-720 mf-inline-auto">
+                <details class="mf-margin-block-7">
+                    <summary class="mf-color-blue-900 mf-font-size-lg mf-padding-block-start-3 mf-border-block-start-400">What is Bookmark?</summary>
+                    <p>Donec eget porttitor turpis, sed molestie odio. Suspendisse luctus nisl et nisl pharetra volutpat. Quisque lobortis sollicitudin mi non maximus.</p>
+                </details>
+                <details class="mf-margin-block-7">
+                    <summary class="mf-color-blue-900 mf-font-size-lg mf-padding-block-start-3 mf-border-block-start-400">How can I request a new browser?</summary>
+                    <p>Donec eget porttitor turpis, sed molestie odio. Suspendisse luctus nisl et nisl pharetra volutpat. Quisque lobortis sollicitudin mi non maximus.</p>
+                    <p>Nam luctus commodo nisi, sit amet dapibus leo iaculis non. In pretium mi at condimentum tempus. Integer auctor, diam at blandit tristique, lorem dolor lacinia lorem, eget dapibus velit lectus quis sapien.</p>
+                </details>
+                <details class="mf-margin-block-7">
+                    <summary class="mf-color-blue-900 mf-font-size-lg mf-padding-block-start-3 mf-border-block-start-400">Is there a mobile app?</summary>
+                    <p>Donec eget porttitor turpis, sed molestie odio. Suspendisse luctus nisl et nisl pharetra volutpat. Aliquam euismod neque ac posuere facilisis. Integer vehicula lacus ac lectus posuere dictum. Aliquam erat volutpat.</p>
+                    <p>Quisque lobortis sollicitudin mi non maximus. Proin a lacus eu urna gravida luctus. Sed ullamcorper quis tortor ac sodales.</p>
+                </details>
+                <details class="mf-margin-block-7">
+                    <summary class="mf-color-blue-900 mf-font-size-lg mf-padding-block-start-3 mf-border-block-start-400">What about other Chromium browsers?</summary>
+                    <p>Donec eget porttitor turpis, sed molestie odio. Suspendisse luctus nisl et nisl pharetra volutpat. Quisque lobortis sollicitudin mi non maximus.</p>
+                    <p>Dapibus velit lectus quis sapien. Integer urna justo, finibus id fermentum vitae, convallis consequat nunc.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+    <aside class="mf-padding-block-12 mf-bg-blue">
+        <div class="mf-wrapper mf-text-align-center mf-color-white">
+            <p class="mf-text-transform-uppercase">35.000+ Already Joined</p>
+            <p class="mf-font-size-3xl mf-line-height-sm mf-margin-block-7 mf-lg-max-width-540 mf-inline-auto">Stay up-to-date with what we're doing</p>
+            <form action="#" class="mf-lg-max-width-540 mf-inline-auto">
+                <div class="mf-grid mf-grid-6 mf-gap-4">
+                    <label for="newsletter" class="mf-screen-reader"></label>
+                    <input type="email" name="newsletter" id="newsletter" class="mf-bg-white mf-border-radius-base mf-color-black mf-font-size-sm mf-font-weight-bold mf-padding-block-3 mf-padding-inline-6 mf-grid-column-1-s-4">
+                    <button type="submit" class="mf-bg-red mf-border-radius-base mf-color-white mf-font-size-sm mf-font-weight-bold mf-padding-block-3 mf-padding-inline-6 mf-lg-grid-column-5-s-2">Contact Us</button>
+                </div>
+            </form>
+        </div>
+    </aside>
+    <footer id="main-footer" class="mf-padding-block-10 mf-bg-blue-700">
+        <div class="mf-wrapper mf-grid mf-grid-6 mf-align-center">
+            <div class="site-icon mf-grid-column-1-2">
+                <a href="/" arial-label="link to frontpage"><img src="/assets/images/logo-bookmark-white.svg" alt="logo bookmark">
+                </a>
+            </div>
+            <nav class="main-menu mf-lg-grid-column-2-6">
+                <ul class="mf-flex mf-font-size-xs mf-text-transform-uppercase mf-letter-spacing-1">
+                    <li class="mf-padding-inline-4"><a href="#" class="mf-color-gray-300">Featured</a></li>
+                    <li class="mf-padding-inline-4"><a href="#" class="mf-color-gray-300">Pricing</a></li>
+                    <li class="mf-padding-inline-4"><a href="#" class="mf-color-gray-300">Contact</a></li>
+                </ul>
+            </nav>
+            <nav class="social-menu mf-lg-grid-column-6-s-1">
+                <ul class="mf-flex mf-align-center">
+                    <li class="mf-padding-inline-4"><a href="#" arial-label="link to facebook"><img src="/assets/images/icon-facebook.svg" alt="logo facebook"></a></li>
+                    <li><a href="#" arial-label="link to twitter"><img src="/assets/images/icon-twitter.svg" alt="logo twitter"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

@@ -3,7 +3,7 @@
 ## Description
 Tasca 1.2
 
-A landing page. Three versions: Vainilla, Sass, TailwindCSS. Each version has its own branch.
+A landing page. Three versions: Vanilla, Sass, TailwindCSS. Each version has its own branch.
 
 ## Technologies
 - HTML.

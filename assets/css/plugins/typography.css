@@ -1,0 +1,125 @@
+/*
+ * Typography
+ */
+
+h1 {
+    font-size: var(--mf-font-size-3xl);
+    line-height: var(--mf-line-height-xs);
+}
+
+h2 {
+    font-size: var(--mf-font-size-2xl);
+    line-height: var(--mf-line-height-xs);
+}
+
+h3 {
+    font-size: var(--mf-font-size-2xl)
+}
+
+h4 {
+    font-size: var(--mf-font-size-2xl)
+}
+
+h5 {
+    font-size: var(--mf-font-size-2xl)
+}
+
+h6 {
+    font-size: var(--mf-font-size-2xl)
+}
+
+p, ul, ol {
+    font-size: var(--mf-font-size-base);
+    line-height: var(--mf-line-height-base);
+}
+
+.mf-font-size-xs {
+    font-size: var(--mf-font-size-xs);
+}
+.mf-font-size-sm {
+    font-size: var(--mf-font-size-sm);
+}
+.mf-font-size-base {
+    font-size: var(--mf-font-size-base);
+}
+.mf-font-size-lg {
+    font-size: var(--mf-font-size-lg);
+}
+.mf-font-size-xl {
+    font-size: var(--mf-font-size-xl);
+}
+.mf-font-size-2xl {
+    font-size: var(--mf-font-size-2xl);
+}
+.mf-font-size-3xl {
+    font-size: var(--mf-font-size-3xl);
+}
+.mf-font-size-4xl {
+    font-size: var(--mf-font-size-4xl);
+}
+.mf-font-size-5xl {
+    font-size: var(--mf-font-size-5xl);
+}
+.mf-font-size-6xl {
+    font-size: var(--mf-font-size-6xl);
+}
+
+.mf-font-weight-light {
+    font-weight: var(--mf-font-weight-light);
+}
+.mf-font-weight-normal {
+    font-weight: var(--mf-font-weight-normal);
+}
+.mf-font-weight-semibold {
+    font-weight: var(--mf-font-weight-semibold);
+}
+.mf-font-weight-bold {
+    font-weight: var(--mf-font-weight-bold);
+}
+
+.mf-line-height-xs {
+    line-height: var(--mf-line-height-xs);
+}
+.mf-line-height-sm {
+    line-height: var(--mf-line-height-sm);
+}
+.mf-line-height-base {
+    line-height: var(--mf-line-height-base);
+}
+.mf-line-height-lg {
+    line-height: var(--mf-line-height-lg);
+}
+
+.mf-text-align-center {
+    text-align: center;
+}
+
+.mf-text-transform-uppercase {
+    text-transform: uppercase;
+}
+
+.mf-letter-spacing-1 {
+    letter-spacing: 1px;
+}
+
+.mf-letter-spacing-2 {
+    letter-spacing: 2px;
+}
+
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size: var(--mf-font-size-4xl);
+    }
+    h2 {
+        font-size: var(--mf-font-size-3xl);
+    }
+    h3 {
+        font-size: var(--mf-font-size-3xl);
+    }
+    .mf-lg-text-align-left {
+        text-align: left;
+    }
+    .mf-lg-text-align-center {
+        text-align: center;
+    }
+}

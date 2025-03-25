@@ -1,0 +1,19 @@
+/*
+ * Borders
+ */
+
+.mf-border-block-start-200 {
+    border-block-start: 1px solid var(--mf-color-gray-200);
+}
+
+.mf-border-block-start-300 {
+    border-block-start: 1px solid var(--mf-color-gray-300);
+}
+
+.mf-border-block-start-400 {
+    border-block-start: 1px solid var(--mf-color-gray-400);
+}
+
+.mf-border-block-start-500 {
+    border-block-start: 1px solid var(--mf-color-gray-500);
+}

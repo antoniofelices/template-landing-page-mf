@@ -1,0 +1,10 @@
+/*
+ * Global CSS
+ */
+
+body {
+    background-color: var(--mf-color-white);
+    color: var(--mf-color-gray);
+    font-family: var(--mf-font-family-sans-serif);
+    line-height: var(--mf-line-height-base);
+}

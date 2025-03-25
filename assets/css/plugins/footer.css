@@ -1,0 +1,27 @@
+/*
+ * Footer
+ */
+
+#main-footer img {
+    height: var(--mf-spacing-6);
+}
+
+/* @media screen and (min-width: 1200px) {
+
+    #main-footer .site-icon {
+        grid-column: 1/2;
+    }
+    
+    #main-footer .main-menu {
+        grid-column: 2/6;
+    }
+    
+    #main-footer .social-menu {
+        grid-column: 6/span 1;
+    }
+
+    #main-footer .social-menu {
+        justify-self: flex-end;
+    } 
+
+} */
