@@ -19,6 +19,10 @@
     justify-content: space-between;
 }
 
+.mf-justify-center {
+    justify-content: center;
+}
+
 .mf-align-center {
     align-items: center;
 }
@@ -61,6 +65,14 @@
 
 .mf-inline-auto {
     margin-inline: auto;
+}
+
+.mf-hide {
+    display: none;
+}
+
+.mf-show {
+    display: initial;
 }
 
 @media screen and (min-width: 1200px) {

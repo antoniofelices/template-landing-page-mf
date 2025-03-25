@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
 
     const menuTabsButtons = document.querySelectorAll('.mf-menu-tabs button')

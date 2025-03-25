@@ -17,3 +17,23 @@
 .mf-border-block-start-500 {
     border-block-start: 1px solid var(--mf-color-gray-500);
 }
+
+.mf-border-block-end-200 {
+    border-block-end: 1px solid var(--mf-color-gray-200);
+}
+
+.mf-border-block-end-300 {
+    border-block-end: 1px solid var(--mf-color-gray-300);
+}
+
+.mf-border-block-end-400 {
+    border-block-end: 1px solid var(--mf-color-gray-400);
+}
+
+.mf-border-block-end-500 {
+    border-block-end: 1px solid var(--mf-color-gray-500);
+}
+
+.mf-border-block-end-active-red {
+    border-block-end: 5px solid var(--mf-color-red);
+}
