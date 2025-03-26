@@ -11,15 +11,13 @@ function styles() {
         'assets/css/plugins/colors.css',
         'assets/css/plugins/spacing.css',
         'assets/css/plugins/utilities.css',
+        'assets/css/plugins/screen-visibility.css',
+        'assets/css/plugins/shapes.css',
         'assets/css/plugins/grid.css',
         'assets/css/plugins/flex.css',
-        'assets/css/plugins/buttons.css',
         'assets/css/plugins/borders.css',
         'assets/css/plugins/border-radius.css',
-        'assets/css/plugins/shadows.css',
-        'assets/css/plugins/tabs.css',
-        'assets/css/plugins/header.css',
-        'assets/css/plugins/footer.css'
+        'assets/css/plugins/shadows.css'
     ])
     .pipe(concat('main.css'))
     .pipe(dest('assets/css'));

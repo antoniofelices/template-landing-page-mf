@@ -8,3 +8,57 @@ body {
     font-family: var(--mf-font-family-sans-serif);
     line-height: var(--mf-line-height-base);
 }
+
+summary {
+    display: flex;
+    justify-content: space-between;
+}
+summary::marker {
+    content: '';
+}
+summary:focus {
+    outline: none;
+}
+summary:after {
+    content: url("../images/icon-arrow.svg");
+}
+details[open] summary {
+    border-block-end: none;
+}
+details[open] summary:after {
+    transform: rotate(180deg);
+    transition: transform .25s ease-in-out;
+}
+
+.logo-bookmark {
+    height: var(--mf-spacing-6);
+}
+
+.tab-active {
+    position: relative;
+}
+
+.tab-active:after {
+    content: '';
+    display: block;
+    border-block-end: 5px solid var(--mf-color-red);
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline-start: 25%;
+    width: 50%;
+}
+
+@media screen and (min-width: 1200px) {
+    .container-image-hero {
+        width: 120%;
+    }
+    .container-image-hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+    .tab-active:after {
+        inset-inline-start: 0;
+        width: 100%;
+    }
+}

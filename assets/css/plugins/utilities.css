@@ -23,6 +23,10 @@
     justify-content: center;
 }
 
+.mf-justify-items-center {
+    justify-items: center;
+}
+
 .mf-align-center {
     align-items: center;
 }
@@ -79,8 +83,16 @@
     .mf-lg-justify-space-between {
         justify-content: space-between;
     }
-    
     .mf-lg-align-center {
         align-items: center;
+    }
+    .mf-lg-justify-center {
+        justify-content: center;
+    }
+    .mf-lg-justify-items-start {
+        justify-items: flex-start;
+    }
+    .mf-lg-justify-self-end {
+        justify-self: flex-end;
     }
 }

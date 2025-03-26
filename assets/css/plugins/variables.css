@@ -18,7 +18,7 @@
     --mf-border-radius-xl: 16px;
 
     /* Content Size */
-    --mf-global-content-size: min(94vw, 1200px);
+    --mf-global-content-size: min(88vw, 1200px);
 
     /* Colors */
     --mf-color-blue: #5266df;
@@ -73,10 +73,10 @@
     --mf-spacing-9: 4rem;
     --mf-spacing-10: clamp(16px, 2vw, 5rem);
     --mf-spacing-11: clamp(16px, 4vw, 6rem);
-    --mf-spacing-12: clamp(16px, 6vw, 7rem);
-    --mf-spacing-13: clamp(16px, 8vw, 8rem);
-    --mf-spacing-14: clamp(16px, 8vw, 9rem);
-    --mf-spacing-15: clamp(16px, 8vw, 10rem);
+    --mf-spacing-12: clamp(32px, 6vw, 7rem);
+    --mf-spacing-13: clamp(32px, 6vw, 8rem);
+    --mf-spacing-14: clamp(40px, 6vw, 9rem);
+    --mf-spacing-15: clamp(72px, 6vw, 10rem);
     --mf-spacing-50vh: 50vh;
     --mf-spacing-100vh: 100vh;
     --mf-spacing-50vw: 50vw;

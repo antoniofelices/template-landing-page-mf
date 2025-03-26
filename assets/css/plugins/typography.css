@@ -48,21 +48,6 @@ p, ul, ol {
 .mf-font-size-xl {
     font-size: var(--mf-font-size-xl);
 }
-.mf-font-size-2xl {
-    font-size: var(--mf-font-size-2xl);
-}
-.mf-font-size-3xl {
-    font-size: var(--mf-font-size-3xl);
-}
-.mf-font-size-4xl {
-    font-size: var(--mf-font-size-4xl);
-}
-.mf-font-size-5xl {
-    font-size: var(--mf-font-size-5xl);
-}
-.mf-font-size-6xl {
-    font-size: var(--mf-font-size-6xl);
-}
 
 .mf-font-weight-light {
     font-weight: var(--mf-font-weight-light);
@@ -115,6 +100,27 @@ p, ul, ol {
     }
     h3 {
         font-size: var(--mf-font-size-3xl);
+    }
+    .mf-lg-font-size-lg {
+        font-size: var(--mf-font-size-lg);
+    }
+    .mf-lg-font-size-xl {
+        font-size: var(--mf-font-size-xl);
+    }
+    .mf-lg-font-size-2xl {
+        font-size: var(--mf-font-size-2xl);
+    }
+    .mf-lg-font-size-3xl {
+        font-size: var(--mf-font-size-3xl);
+    }
+    .mf-lg-font-size-4xl {
+        font-size: var(--mf-font-size-4xl);
+    }
+    .mf-lg-font-size-5xl {
+        font-size: var(--mf-font-size-5xl);
+    }
+    .mf-lg-font-size-6xl {
+        font-size: var(--mf-font-size-6xl);
     }
     .mf-lg-text-align-left {
         text-align: left;
