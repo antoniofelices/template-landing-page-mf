@@ -95,4 +95,19 @@
     .mf-lg-justify-self-end {
         justify-self: flex-end;
     }
+    .mf-lg-gap-4 {
+        gap: var(--mf-spacing-4);
+    }
+    
+    .mf-lg-gap-5 {
+        gap: var(--mf-spacing-5);
+    }
+    
+    .mf-lg-gap-6 {
+        gap: var(--mf-spacing-6);
+    }
+    
+    .mf-lg-gap-7 {
+        gap: var(--mf-spacing-7);
+    }
 }

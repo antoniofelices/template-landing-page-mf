@@ -20,13 +20,14 @@ summary:focus {
     outline: none;
 }
 summary:after {
-    content: url("../images/icon-arrow.svg");
+    content: url("../images/icon-arrow-blue.svg");
 }
 details[open] summary {
     border-block-end: none;
 }
 details[open] summary:after {
     transform: rotate(180deg);
+    content: url("../images/icon-arrow-red.svg");
     transition: transform .25s ease-in-out;
 }
 
@@ -48,11 +49,28 @@ details[open] summary:after {
     width: 50%;
 }
 
+.hero-container {
+    grid-template-areas: "heroimage"
+                        "herotext";
+}
+
+.hero-text {
+    grid-area: herotext;
+}
+
+.hero-image {
+    grid-area: heroimage;
+}
+
 @media screen and (min-width: 1200px) {
-    .container-image-hero {
+    .hero-container {
+        grid-template-areas: "herotext heroimage"
+                            "herotext heroimage";
+    }
+    .hero-image {
         width: 120%;
     }
-    .container-image-hero img {
+    .hero-image img {
         width: 100%;
         height: 100%;
         object-fit: cover; 

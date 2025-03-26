@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const currentButton = event.currentTarget
             const tabName = currentButton.getAttribute('data-tab')
 
-            currentButton.classList.add('mf-border-block-end-active-red')
+            currentButton.classList.add('tab-active')
             currentButton.classList.add('mf-color-blue-900')
             menuTabsButtons.forEach(item => {
                 if (item !== currentButton) {
-                    item.classList.remove('mf-border-block-end-active-red')
+                    item.classList.remove('tab-active')
                     item.classList.remove('mf-color-blue-900')
                 }
             })

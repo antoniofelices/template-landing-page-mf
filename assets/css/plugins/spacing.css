@@ -431,6 +431,10 @@
         width: 100%;
     }
 
+    .mf-sm-margin-block-8 {
+        margin-block: var(--mf-spacing-8);
+    }
+
     .mf-sm-margin-inline-8 {
         margin-inline: var(--mf-spacing-8)
     }
