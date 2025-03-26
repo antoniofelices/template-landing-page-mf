@@ -1,16 +1,4 @@
 /*
  * Screen Visibility
+ * TODO: remove
  */
-
-.mf-hide-mobile {
-    display: none;
-}
-
-@media screen and (min-width: 1200px) {
-   .mf-hide-mobile {
-        display: initial;
-   }
-   .mf-hide-desktop {
-        display: none;
-   }
-}

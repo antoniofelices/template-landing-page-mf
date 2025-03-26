@@ -1387,11 +1387,23 @@ p, ul, ol {
 }
 
 .mf-hide {
-    display: none;
+    display: none !important;
 }
 
 .mf-show {
-    display: initial;
+    display: initial !important;
+}
+
+@media screen and (max-width: 540px) {
+
+    .mf-sm-hide {
+        display: none !important;
+    }
+    
+    .mf-sm-show {
+        display: initial !important;
+    }
+    
 }
 
 @media screen and (min-width: 1200px) {
@@ -1425,24 +1437,20 @@ p, ul, ol {
     .mf-lg-gap-7 {
         gap: var(--mf-spacing-7);
     }
+
+    .mf-lg-hide {
+        display: none !important;
+    }
+    
+    .mf-lg-show {
+        display: initial !important;
+    }
 }
 
 /*
  * Screen Visibility
+ * TODO: remove
  */
-
-.mf-hide-mobile {
-    display: none;
-}
-
-@media screen and (min-width: 1200px) {
-   .mf-hide-mobile {
-        display: initial;
-   }
-   .mf-hide-desktop {
-        display: none;
-   }
-}
 /*
  * Shapes
  */
