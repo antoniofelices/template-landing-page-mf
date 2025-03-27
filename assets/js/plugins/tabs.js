@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-
+const tabs = () => {
     const menuTabsButtons = document.querySelectorAll('.mf-menu-tabs button')
     const contentTabDiv = document.querySelectorAll('.mf-content-tab')
 
@@ -24,5 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById(tabName).classList.add('mf-show')
         })
     })
+}
 
-})
+export default tabs

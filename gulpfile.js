@@ -1,4 +1,4 @@
-const { src, dest, watch, series, parallel } = require('gulp');
+const { src, dest, watch, series } = require('gulp');
 const concat = require('gulp-concat');
 
 function styles() {
@@ -23,18 +23,8 @@ function styles() {
     .pipe(dest('assets/css'));
 }
 
-function scripts() {
-    return src([
-        'assets/js/plugins/mobile-menu.js',
-        'assets/js/plugins/tabs.js'
-    ])
-    .pipe(concat('main.js'))
-    .pipe(dest('assets/js'));
-}
-
 function watchFiles() {
     watch('assets/css/plugins/*.css', styles);
-    watch('assets/js/plugins/*.js', scripts);
 }
 
-exports.default = series(parallel(styles, scripts), watchFiles);
+exports.default = series(styles, watchFiles);

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+const mobileMenu = () => {
 
     const body = document.body;
     const containerNavHeader = document.getElementById('container-nav-header');
@@ -6,8 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // const iconOpen = document.getElementById('icon-open');
     const mobileDropdownToggleButton = document.getElementById('mobile-dropdown-toggle');
     
-    console.log(mobileDropdownToggleButton)
-
     if(!containerNavHeader) return;
 
     function toggleMobileMenu() {
@@ -18,13 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // iconOpen.classList.toggle('mf-sm-hide');
     }
 
-    function closeMobileMenu() {
-        body.classList.remove('h-dvh');
-        body.classList.remove('mf-overflow-y-hide');
-        containerNavHeader.classList.add('mf-sm-hide');
-        // iconClose.classList.add('mf-sm-hide');
-        // iconOpen.classList.remove('mf-sm-hide');
-    }
+    // function closeMobileMenu() {
+    //     body.classList.remove('h-dvh');
+    //     body.classList.remove('mf-overflow-y-hide');
+    //     containerNavHeader.classList.add('mf-sm-hide');
+    //     iconClose.classList.add('mf-sm-hide');
+    //     iconOpen.classList.remove('mf-sm-hide');
+    // }
 
     // function handleOutsideClick(event) {
     //     const target = event.target;
@@ -37,4 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     mobileDropdownToggleButton.addEventListener('click', toggleMobileMenu);
     // document.addEventListener('click', handleOutsideClick);
-});
+
+}
+
+export default mobileMenu
