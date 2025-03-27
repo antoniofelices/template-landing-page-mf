@@ -3,28 +3,29 @@ const concat = require('gulp-concat');
 
 function styles() {
     return src([
-        'assets/css/plugins/preflight.css',
-        'assets/css/plugins/fonts.css',
-        'assets/css/plugins/variables.css',
-        'assets/css/plugins/global.css',
-        'assets/css/plugins/typography.css',
-        'assets/css/plugins/colors.css',
-        'assets/css/plugins/spacing.css',
-        'assets/css/plugins/utilities.css',
-        'assets/css/plugins/screen-visibility.css',
-        'assets/css/plugins/shapes.css',
-        'assets/css/plugins/grid.css',
-        'assets/css/plugins/flex.css',
-        'assets/css/plugins/borders.css',
-        'assets/css/plugins/border-radius.css',
-        'assets/css/plugins/shadows.css'
+        'assets/css/mf/preflight.css',
+        'assets/css/mf/fonts.css',
+        'assets/css/mf/variables.css',
+        'assets/css/mf/global.css',
+        'assets/css/mf/type.css',
+        'assets/css/mf/colors.css',
+        'assets/css/mf/spacing.css',
+        'assets/css/mf/utilities.css',
+        'assets/css/mf/shapes.css',
+        'assets/css/mf/grid.css',
+        'assets/css/mf/flex.css',
+        'assets/css/mf/borders.css',
+        'assets/css/mf/border-radius.css',
+        'assets/css/mf/shadows.css',
+        // 'assets/css/custom-variables.css',
+        'assets/css/custom.css'
     ])
     .pipe(concat('main.css'))
     .pipe(dest('assets/css'));
 }
 
 function watchFiles() {
-    watch('assets/css/plugins/*.css', styles);
+    watch('assets/css/mf/*.css', styles);
 }
 
 exports.default = series(styles, watchFiles);

@@ -1,0 +1,59 @@
+/*
+ * Utilities.
+ */
+
+.mf-justify-space-between {
+    justify-content: space-between;
+}
+
+.mf-justify-center {
+    justify-content: center;
+}
+
+.mf-justify-items-center {
+    justify-items: center;
+}
+
+.mf-align-center {
+    align-items: center;
+}
+
+.mf-inline-auto {
+    margin-inline: auto;
+}
+
+.mf-hide {
+    display: none !important;
+}
+
+.mf-show {
+    display: initial !important;
+}
+
+@media screen and (max-width: 540px) {
+    .mf-sm-hide {
+        display: none !important;
+    }
+    
+    .mf-sm-show {
+        display: initial !important;
+    } 
+}
+
+@media screen and (min-width: 1200px) {
+    .mf-lg-justify-space-between {
+        justify-content: space-between;
+    }
+    .mf-lg-align-center {
+        align-items: center;
+    }
+    .mf-lg-justify-center {
+        justify-content: center;
+    }
+    .mf-lg-justify-items-start {
+        justify-items: flex-start;
+    }
+    .mf-lg-justify-self-end {
+        justify-self: flex-end;
+    }
+}

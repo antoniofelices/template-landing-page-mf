@@ -1,5 +1,5 @@
 /*
- * CSS custom properties
+ * CSS custom properties.
  */
 
 :root {
@@ -81,5 +81,4 @@
     --mf-spacing-100vh: 100vh;
     --mf-spacing-50vw: 50vw;
     --mf-spacing-100vw: 100vw;
-
 }

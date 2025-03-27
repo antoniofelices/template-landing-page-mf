@@ -1,6 +1,7 @@
 /*
  * Grid
  */
+
 .mf-grid {
     display: grid;
 }
@@ -25,7 +26,6 @@
 .mf-grid-column-1-s-5 {
     grid-column: 1/span 5;
 }
-
 
 @media screen and (min-width: 1200px) {
     .mf-grid-2 {

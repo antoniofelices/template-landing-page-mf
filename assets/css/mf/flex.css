@@ -1,6 +1,7 @@
 /*
- * Flex
+ * Flex.
  */
+
 .mf-flex {
     display: flex;
     gap: var(--mf-spacing-4);
