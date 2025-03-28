@@ -6,17 +6,17 @@
  */
 
 #main-header {
-   @include mixins.flex( $justifycontent: space-between );
+   @include mixins.flex( $justify-content: space-between );
    @include mixins.wrapper();
    padding-block: variables.$spacing-10;
 }
 
 #container-nav-header {
-    @include mixins.flex( $justifycontent: space-between );
+    @include mixins.flex( $justify-content: space-between );
 }
 
 .main-menu ul {
-    @include mixins.flex( $justifycontent: space-between );
+    @include mixins.flex( $justify-content: space-between );
     flex-direction: column;
     font-size: variables.$font-size-sm;
     letter-spacing: 1px;
@@ -37,7 +37,7 @@
         flex-direction: row;
     }
     .main-menu ul {
-        @include mixins.flex( $justifycontent: space-between );
+        @include mixins.flex( $justify-content: space-between );
         flex-direction: row;
     }
 }

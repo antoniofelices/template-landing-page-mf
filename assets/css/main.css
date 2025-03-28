@@ -377,6 +377,28 @@ input:where([type=button], [type=reset], [type=submit]),
  * Main.
  */
 /*
+ * Utilities.
+ */
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: initial !important;
+}
+
+@media only screen and (max-width: 576px) {
+  .sm-hide {
+    display: none !important;
+  }
+  .sm-show {
+    display: initial !important;
+  }
+}
+/*
+ * Main.
+ */
+/*
  * HTML.
  */
 body {
@@ -528,27 +550,197 @@ details[open] summary:after {
  * Main.
  */
 /*
+ * Type.
+ */
+h1, h2, h3, h4, h5, h6 {
+  color: #080a16;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.027rem;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 1.602rem;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 1.602rem;
+  line-height: 1;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 3.247rem;
+  }
+  h2 {
+    font-size: 2.027rem;
+  }
+  h3 {
+    font-size: 2.027rem;
+  }
+  .text-lg-align-center {
+    text-align: center;
+  }
+}
+/*
+ * Main.
+ */
+/*
+ * Container.
+ */
+.container {
+  max-width: min(88vw, 1200px);
+  margin-inline: auto;
+}
+
+@media (min-width: 1200px) {
+  .container-max-576 {
+    max-width: 576px;
+    margin-inline: auto;
+  }
+  .container-max-720 {
+    max-width: 768px;
+    margin-inline: auto;
+  }
+  .container-max-992 {
+    max-width: 992px;
+    margin-inline: auto;
+  }
+}
+/*
+ * Main.
+ */
+/*
+ * Card.
+ */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-inline: 2rem;
+  padding-block: clamp(2rem, 2vw, 5rem);
+  padding-inline: 2rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+.card h3 {
+  color: #080a16;
+  font-size: 1.266rem;
+  font-weight: 700;
+  text-align: center;
+}
+.card p {
+  font-size: 0.889rem;
+}
+.card button {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .card button {
+    width: auto;
+  }
+}
+/*
+ * Main.
+ */
+/*
+ * Tabs.
+ */
+.menu-tabs {
+  font-size: 1.125rem;
+  padding-block: 1rem;
+  margin-block-end: 4rem;
+  align-items: center;
+  display: grid;
+  grid-gap: 2rem 2rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 1200px) {
+  .menu-tabs {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.menu-tabs button:first-of-type {
+  grid-column: 2/3;
+}
+.menu-tabs button {
+  padding-block: 1rem;
+  border-block-end: 1px solid #c8c9cb;
+}
+.menu-tabs .tab-active {
+  color: #080a16;
+}
+
+.content-tab h3 {
+  text-align: center;
+}
+.content-tab p {
+  margin-block: 2rem;
+}
+
+@media (min-width: 1200px) {
+  .menu-tabs {
+    justify-items: center;
+  }
+  .content-tab > div {
+    align-items: center;
+    display: grid;
+    grid-gap: 2rem 2rem;
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 1200px) and (min-width: 1200px) {
+  .content-tab > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .content-tab h3 {
+    text-align: left;
+  }
+}
+/*
+ * Main.
+ */
+/*
  * Header.
  */
 #main-header {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
   max-width: min(88vw, 1200px);
   margin-inline: auto;
   padding-block: clamp(2rem, 2vw, 5rem);
 }
 
 #container-nav-header {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
 }
 
 .main-menu ul {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
   flex-direction: column;
   font-size: 0.889rem;
   letter-spacing: 1px;
@@ -569,9 +761,32 @@ details[open] summary:after {
     flex-direction: row;
   }
   .main-menu ul {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    display: flex;
     flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+/*
+ * Main.
+ */
+/*
+ * Buttons.
+ */
+#hero {
+  padding-block: clamp(3rem, 4vw, 6rem);
+}
+
+.hero-container {
+  align-items: center;
+  display: grid;
+  grid-gap: 2rem 2rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 1200px) {
+  .hero-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

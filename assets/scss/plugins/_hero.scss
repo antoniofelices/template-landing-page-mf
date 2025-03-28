@@ -1,0 +1,21 @@
+@use "../variables";
+@use "mixins";
+
+/*
+ * Buttons.
+ */
+#hero {
+    padding-block: variables.$spacing-11
+}
+
+.hero-container {
+    @include mixins.grid( $template-columns: repeat(2, 1fr) );
+}
+
+.hero-text {
+
+}
+
+.hero-image {
+
+}

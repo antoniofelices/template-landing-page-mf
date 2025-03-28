@@ -1,0 +1,34 @@
+@use "../variables";
+@use "mixins";
+
+/*
+ * Card.
+ */
+.card {
+    background-color: variables.$color-white;
+    border-radius: variables.$border-radius-base;
+    margin-inline: variables.$spacing-7;
+    padding-block: variables.$spacing-10;
+    padding-inline: variables.$spacing-7;
+    @include mixins.flex( $direction: column );
+    h3 {
+        color: variables.$color-blue-900;
+        font-size: variables.$font-size-lg;
+        font-weight: variables.$font-weight-bold;
+        text-align: center;
+    }
+    p {
+        font-size: variables.$font-size-sm;
+    }
+    button {
+        width: 100%;
+    }
+}
+
+@include mixins.breakpoint( lg ) {
+    .card {
+        button {
+            width: auto;
+        }
+    }
+}

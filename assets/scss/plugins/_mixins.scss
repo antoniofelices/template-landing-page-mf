@@ -30,15 +30,33 @@
     border-radius: $size;
 }
 
-@mixin flex( $justifycontent: center, $alignitems: center ) {
+@mixin flex( 
+	$align-items: center,
+	$gap: variables.$spacing-7,
+	$direction: row,
+	$justify-content: center
+) {
+	align-items: $align-items;
 	display: flex;
-	justify-content: $justifycontent;
-	align-items: $alignitems;
+	flex-direction: $direction;
+	gap: $gap;
+	justify-content: $justify-content;
 }
 
-@mixin grid( $grid-gap-vertical: variables.$spacing-7, $grid-gap-horizontal: variables.$spacing-7 ) {
+@mixin grid(
+	$align-items: center,
+	$gap-vertical: variables.$spacing-7,
+	$gap-horizontal: variables.$spacing-7,
+	$template-columns: 1fr
+) {
+	align-items: $align-items;
 	display: grid;
-	grid-gap: $grid-gap-vertical $grid-gap-horizontal;
+	grid-gap: $gap-vertical $gap-horizontal;
+	grid-template-columns: 1fr;
+	@include breakpoint( xl ) {
+		grid-template-columns: $template-columns;
+	}
+
 }
 
 @mixin wrapper() {
@@ -58,7 +76,7 @@
 	$hoverbgcolor: variables.$color-red,
 	$padding: variables.$spacing-3 variables.$spacing-6,
 	$width: auto,
-	){
+){
 	background-color: $bgcolor;
 	border-radius: $borderradius;
 	@include border( $color: $bordercolor );

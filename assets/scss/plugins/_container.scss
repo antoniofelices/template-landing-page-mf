@@ -1,0 +1,25 @@
+@use "sass:map";
+@use "../variables";
+@use "mixins";
+
+/*
+ * Container.
+ */
+.container {
+    @include mixins.wrapper();
+}
+
+@include mixins.breakpoint( xl ) {
+    .container-max-576 {
+        max-width: map.get(variables.$breakpoints, 'sm');
+        margin-inline: auto;
+    }
+    .container-max-720 {
+        max-width: map.get(variables.$breakpoints, 'md');
+        margin-inline: auto;
+    }
+    .container-max-992 {
+        max-width: map.get(variables.$breakpoints, 'lg');
+        margin-inline: auto;
+    }
+}

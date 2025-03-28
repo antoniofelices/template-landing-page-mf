@@ -1,0 +1,44 @@
+@use "../variables";
+@use "mixins";
+
+/*
+ * Type.
+ */
+h1, h2, h3, h4, h5, h6 {
+    color: variables.$color-blue-900;
+    font-weight: variables.$font-weight-bold;
+}
+
+h1 {
+    font-size: variables.$font-size-3xl;
+    line-height: variables.$line-height-xs;
+}
+
+h2 {
+    font-size: variables.$font-size-2xl;
+    line-height: variables.$line-height-xs;
+}
+
+h3 {
+    font-size: variables.$font-size-2xl;
+    line-height: variables.$line-height-xs;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+@include mixins.breakpoint( xl ) {
+    h1 {
+        font-size: variables.$font-size-4xl;
+    }
+    h2 {
+        font-size: variables.$font-size-3xl;
+    }
+    h3 {
+        font-size: variables.$font-size-3xl;
+    }
+    .text-lg-align-center {
+        text-align: center;
+    }
+}

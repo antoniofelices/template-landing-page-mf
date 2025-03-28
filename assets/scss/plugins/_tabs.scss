@@ -1,0 +1,45 @@
+@use "../variables";
+@use "mixins";
+
+/*
+ * Tabs.
+ */
+.menu-tabs {
+    font-size: variables.$font-size-base;
+    padding-block: variables.$spacing-4;
+    margin-block-end: variables.$spacing-9;
+    @include mixins.grid( $template-columns: repeat(5, 1fr) );
+    button:first-of-type {
+        grid-column: 2/3;
+    }
+    button {
+        padding-block: variables.$spacing-4;
+        @include mixins.border( $typeBorder: block-end, $color: variables.$color-gray-300 )
+    }
+    .tab-active {
+        color: variables.$color-blue-900;
+    }
+}
+
+.content-tab {
+    h3 {
+        text-align: center;
+    }
+    p {
+        margin-block: variables.$spacing-7;
+    }
+}
+
+@include mixins.breakpoint( xl ) {
+    .menu-tabs {
+        justify-items: center;
+    }
+    .content-tab {
+        > div {
+            @include mixins.grid( $template-columns: repeat(2, 1fr) )
+        }
+        h3 {
+            text-align: left;
+        }
+    }
+}
