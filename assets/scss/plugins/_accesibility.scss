@@ -1,3 +1,5 @@
+@use "../variables";
+
 /*
  * Accesibility.
  */
@@ -20,13 +22,13 @@
 	width: auto;
 	position: static;
 	display: block;
-	font-size: var(--mf-font-size-base);
-	color: var(--mf-color-black);
-	background: var(--mf-bg-white);
+	font-size: variables.$font-size-base;
+	color: variables.$color-black;
+	background: variables.$color-white;
 	text-decoration: none;
-	box-shadow: 0px 2px var(--mf-spacing-1) var(--mf-color-gray-400);
+	box-shadow: 0px 2px variables.$spacing-1 variables.$color-gray-400;
 }
 
 :focus {
-	outline: 1px dotted var(--mf-color-gray-300);
+	outline: 1px dotted variables.$color-gray-300;
 }

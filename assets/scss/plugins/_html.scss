@@ -1,17 +1,20 @@
+@use "../variables";
+@use "mixins";
+
 /*
- * Global CSS.
+ * HTML.
  */
 
 body {
-    background-color: var(--mf-color-white);
-    color: var(--mf-color-gray);
-    font-family: var(--mf-font-family-sans-serif);
-    line-height: var(--mf-line-height-base);
+    background-color: variables.$color-white;
+    color: variables.$color-gray;
+    font-family: variables.$font-family-sans-serif;
+    line-height: variables.$line-height-base;
 }
 
 p, ul, ol {
-    font-size: var(--mf-font-size-base);
-    line-height: var(--mf-line-height-base);
+    font-size: variables.$font-size-base;
+    line-height: variables.$line-height-base;
 }
 
 summary {

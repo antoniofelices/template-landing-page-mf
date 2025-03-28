@@ -1,0 +1,25 @@
+@use "../variables";
+@use "mixins";
+
+/*
+ * Buttons.
+ */
+.button-blue {
+    @include mixins.button();
+}
+
+.button-red {
+    @include mixins.button( $bgcolor: variables.$color-red, $hovercolor: variables.$color-blue );
+}
+
+.button-red-sm {
+    @include mixins.button(
+        $bgcolor: variables.$color-red,
+        $bordercolor: variables.$color-red,
+        $hovercolor: variables.$color-blue,
+        $fontweight: variables.$font-weight-normal,
+        $padding: variables.$spacing-2 variables.$spacing-7
+    );
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}

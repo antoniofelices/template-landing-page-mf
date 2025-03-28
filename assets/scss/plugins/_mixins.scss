@@ -1,0 +1,80 @@
+@use "sass:map";
+@use "../variables";
+
+/*
+ * Mixins.
+ */
+
+// Media Queries
+@mixin breakpoint( $breakpoint ) {
+	@if map.has-key(variables.$breakpoints, $breakpoint) {
+		@media ( min-width: #{ map.get( variables.$breakpoints, $breakpoint ) }) {
+			@content;
+		}
+	}
+	@else {
+		@warn "No value could be retrieved from `#{$breakpoint}`.";
+	}
+}
+
+@mixin border( $typeBorder: all, $width: 1px, $style: solid, $color: currentColor ) {
+	@if $typeBorder == all {
+		border: $width $style $color;
+	}
+	@else {
+		border-#{$typeBorder}: $width $style $color;
+	}
+}
+
+@mixin border-radius( $size: variables.$border-radius-base ) {
+    border-radius: $size;
+}
+
+@mixin flex( $justifycontent: center, $alignitems: center ) {
+	display: flex;
+	justify-content: $justifycontent;
+	align-items: $alignitems;
+}
+
+@mixin grid( $grid-gap-vertical: variables.$spacing-7, $grid-gap-horizontal: variables.$spacing-7 ) {
+	display: grid;
+	grid-gap: $grid-gap-vertical $grid-gap-horizontal;
+}
+
+@mixin wrapper() {
+    max-width: variables.$global-content-size;
+    margin-inline: auto;
+}
+
+@mixin button(
+	$bgcolor: variables.$color-blue,
+	$bordercolor: variables.$color-blue,
+	$borderradius: variables.$border-radius-base,
+	$color: variables.$color-white,
+	$display: inline-block,
+	$fontsize: variables.$font-size-sm,
+	$fontweight: variables.$font-weight-bold,
+	$hovercolor: variables.$color-red,
+	$hoverbgcolor: variables.$color-red,
+	$padding: variables.$spacing-3 variables.$spacing-6,
+	$width: auto,
+	){
+	background-color: $bgcolor;
+	border-radius: $borderradius;
+	@include border( $color: $bordercolor );
+	color: $color;
+	display: $display;
+	font-size: $fontsize;
+	font-weight: $fontweight;
+	padding: $padding;
+	text-align: center;
+	transition: all .3s ease;
+	width: $width;
+	&:hover, &:active, &:focus {
+		background-color: $hoverbgcolor;
+		border-color: $hoverbgcolor;
+	}
+	a {
+		border-bottom: none;
+	}
+}
