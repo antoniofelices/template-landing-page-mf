@@ -4,7 +4,7 @@
  * Accesibility.
  */
 
-.mf-screen-reader {
+.screen-reader {
     border: 0;
 	clip-path: inset(50%);
 	width: 1px;
@@ -16,7 +16,7 @@
 	word-wrap: normal !important;
 }
 
-.mf-screen-reader:focus{
+.screen-reader:focus{
 	clip-path: none;
 	height: auto;
 	width: auto;

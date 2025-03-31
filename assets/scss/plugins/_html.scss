@@ -18,8 +18,12 @@ p, ul, ol {
 }
 
 summary {
+    color: variables.$color-blue-900;
     display: flex;
+    font-size: variables.$font-size-lg;
     justify-content: space-between;
+    padding: variables.$spacing-5;
+    @include mixins.border( $typeBorder: block-end, $color: variables.$color-gray-300 )
 }
 summary::marker {
     content: '';
@@ -29,6 +33,9 @@ summary:focus {
 }
 summary:after {
     content: url("../images/icon-arrow-blue.svg");
+}
+details {
+    margin-block: variables.$spacing-3;
 }
 details[open] summary {
     border-block-end: none;

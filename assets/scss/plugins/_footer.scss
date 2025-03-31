@@ -1,0 +1,65 @@
+@use "../variables";
+@use "mixins";
+
+/*
+ * Footer.
+ */
+
+#main-footer {
+    background-color: variables.$color-blue-700;
+    padding-block: variables.$spacing-10;
+    > div {
+        @include mixins.grid(
+            $gap-horizontal: variables.$spacing-11,
+            $gap-vertical: variables.$spacing-11,
+            $template-columns: repeat(6, 1fr)
+        );
+    }
+    .main-menu {
+        ul {
+            font-size: variables.$font-size-sm;
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: uppercase;
+            @include mixins.flex( $direction: column );
+        }
+        li {
+            padding-inline: variables.$spacing-4;
+        }
+        a {
+            color: variables.$color-gray-300;
+        }
+    }
+    .social-menu {
+        ul {
+            @include mixins.flex();
+        }
+        li:first-of-type {
+            padding-inline-end: variables.$spacing-4;
+        }
+    }
+
+}
+
+@include mixins.breakpoint( lg ) {
+    #main-footer {
+        > div {
+            justify-items: flex-start;
+            gap: variables.$spacing-7
+        }
+        .site-icon {
+            grid-column: 1/2;
+        }
+        .main-menu {
+            grid-column: 2/6;
+            ul {
+                flex-direction: row;
+                text-align: left;
+            }
+        }
+        .social-menu {
+            grid-column: 6/span 1;
+            justify-self: flex-end;
+        }
+    }
+}

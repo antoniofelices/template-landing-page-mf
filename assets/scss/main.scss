@@ -13,8 +13,11 @@
 @use 'plugins/buttons';
 @use 'plugins/type';
 @use 'plugins/container';
+@use 'plugins/form';
 @use 'plugins/card';
 @use 'plugins/tabs';
 
-@use 'plugins/header';
 @use 'plugins/hero';
+@use 'plugins/header';
+@use 'plugins/newsletter';
+@use 'plugins/footer';

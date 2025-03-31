@@ -1,0 +1,49 @@
+@use "../variables";
+@use "mixins";
+
+/*
+ * Header.
+ */
+
+#main-header {
+   @include mixins.flex( $justify-content: space-between );
+   @include mixins.wrapper();
+   padding-block: variables.$spacing-10;
+   .main-menu {
+        ul {
+            @include mixins.flex( $justify-content: space-between );
+            flex-direction: column;
+            font-size: variables.$font-size-sm;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        li {
+            padding-inline: variables.$spacing-4;
+
+        }
+        a {
+            color: variables.$color-blue-900;
+        }
+   }
+}
+
+#container-nav-header {
+    @include mixins.flex( $justify-content: space-between );
+}
+
+@include mixins.breakpoint( lg ) {
+    #main-header {
+        .main-menu {
+            ul {
+                @include mixins.flex( $justify-content: space-between );
+                flex-direction: row;
+            }
+        }         
+    }
+    #container-nav-header {
+        flex-direction: row;
+    }
+    #mobile-dropdown-toggle {
+        display: none;
+    }
+}
