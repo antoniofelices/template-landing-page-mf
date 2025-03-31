@@ -12,6 +12,16 @@
     @include mixins.button( $bgcolor: variables.$color-red, $hovercolor: variables.$color-blue );
 }
 
+.button-shadow {
+    @include mixins.button(
+        $bgcolor: transparent,
+        $bordercolor: transparent,
+        $color: variables.$color-gray,
+        $hovercolor: variables.$color-white
+    );
+    @include mixins.box-shadow($shadowInset: false, $color: variables.$color-gray-300 );
+}
+
 .button-red-sm {
     @include mixins.button(
         $bgcolor: variables.$color-red,

@@ -8,16 +8,19 @@
 @use 'plugins/preflight';
 @use 'plugins/fonts';
 @use 'plugins/utilities';
+
 @use 'plugins/html';
 @use 'plugins/accesibility';
 @use 'plugins/buttons';
 @use 'plugins/type';
-@use 'plugins/container';
 @use 'plugins/form';
 @use 'plugins/card';
 @use 'plugins/tabs';
 
-@use 'plugins/hero';
 @use 'plugins/header';
+@use 'plugins/hero';
+@use 'plugins/features';
+@use 'plugins/download';
+@use 'plugins/faqs';
 @use 'plugins/newsletter';
 @use 'plugins/footer';

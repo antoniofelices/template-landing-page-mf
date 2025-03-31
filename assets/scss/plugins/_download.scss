@@ -1,0 +1,26 @@
+@use "../variables";
+@use "mixins";
+
+/*
+ * Donwload.
+ */
+#download {
+    padding-block: variables.$spacing-11;
+    .container > p {
+        padding-block: variables.$spacing-10;
+        @include mixins.container-max( md );
+    }
+    .container-cards {
+        margin-block-end: variables.$spacing-10;
+        @include mixins.grid( $gap-horizontal: variables.$spacing-9, $gap-vertical: variables.$spacing-9);
+        @include mixins.container-max( lg );
+    }
+}
+
+@include mixins.breakpoint( lg ) {
+    #download {
+        .container-cards {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

@@ -28,14 +28,14 @@
         </div>
     </header>
     <main>
-        <section id="hero" class="mf-bg-bubble-shape mf-bg-bubble-shape-bottom-right">
+        <section id="hero">
             <div class="hero-container container">
                 <div class="hero-text">
-                    <h1 class="mf-text-align-center mf-lg-text-align-left mf-sm-margin-block-8">A Simple Bookmark Manager</h1>
-                    <p class="mf-text-align-center mf-lg-text-align-left mf-margin-block-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus arcu, commodo sit amet mollis quis, euismod nec metus. Praesent sed scelerisque tellus. Integer auctor suscipit purus.</p>
+                    <h1>A Simple Bookmark Manager</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus arcu, commodo sit amet mollis quis, euismod nec metus. Praesent sed scelerisque tellus. Integer auctor suscipit purus.</p>
                     <div>
                         <button class="button-blue" type="button">Get It On Chrome</button>
-                        <button class="mf-border-radius-base mf-font-size-sm mf-font-weight-bold mf-padding-block-3 mf-padding-inline-6 mf-shadow-0-300" type="button">Get It On Firefox</button>
+                        <button class="button-shadow" type="button">Get It On Firefox</button>
                     </div>
                 </div>
                 <figure class="hero-image">
@@ -43,10 +43,10 @@
                 </figure>
             </div>
         </section>
-        <section id="features" class="mf-padding-block-11 mf-bg-bubble-shape mf-bg-bubble-shape-bottom-left">
+        <section id="features">
             <div class="container">
                 <h2 class="text-align-center">Features</h2>
-                <p class="text-align-center mf-padding-10 container-max-720">In a mauris interdum, commodo erat ac, consectetur dolor. Duis tempor urna quis tellus sodales tempus. Suspendisse suscipit nisl eu justo pretium fringilla.</p>
+                <p class="text-align-center">In a mauris interdum, commodo erat ac, consectetur dolor. Duis tempor urna quis tellus sodales tempus. Suspendisse suscipit nisl eu justo pretium fringilla.</p>
                 <nav class="menu-tabs">
                     <button type="button" data-tab="simple-bookmarking" class="tab-active">Simple Bookmarking</button>
                     <button type="button" data-tab="speedy-searching">Speedy Searching</button>
@@ -84,24 +84,24 @@
                 </div>
             </div>
         </section>
-        <section id="download" class="mf-padding-block-11">
+        <section id="download">
             <div class="container">
                 <h2 class="text-align-center">Download the extension</h2>
-                <p class="text-align-center mf-padding-10 container-max-720">We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
-                <div class="mf-grid mf-grid-3 mf-margin-block-10 mf-gap-9 container-max-992">
-                    <div class="card mf-shadow-0-200">
+                <p class="text-align-center">We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
+                <div class="container-cards">
+                    <div class="card">
                         <img src="/assets/images/logo-chrome.svg" height="120" width="120" alt="Logo browser Chrome">
                         <h3>Add to Chrome</h3>
                         <p>Minimum version 62</p>
                         <button class="button-blue"  type="button">Add to Chrome</button>
                     </div>
-                    <div class="card mf-shadow-0-200">
+                    <div class="card">
                         <img src="/assets/images/logo-firefox.svg" height="120" width="120" alt="Logo browser Firefox">
                         <h3>Add to Firefox</h3>
                         <p>Minimum version 55</p>
                         <button class="button-blue" type="button">Add to Firefox</button>
                     </div>
-                    <div class="card mf-shadow-0-200">
+                    <div class="card">
                         <img src="/assets/images/logo-opera.svg" height="120" width="120" alt="Logo browser Opera">
                         <h3>Add to Opera</h3>
                         <p>Minimum version 46</p>
@@ -110,13 +110,13 @@
                 </div>
             </div>
         </section>
-        <section id="faqs" class="mf-padding-block-11">
+        <section id="faqs">
             <div class="container">
                 <h2 class="text-align-center">Frequently Asked Questions</h2>
-                <p class="text-align-center mf-padding-block-10 container-max-720">Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us,</p>
-                <div class="container-max-720">
+                <p class="text-align-center">Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us,</p>
+                <div class="container-details">
                     <details>
-                        <summary class="mf-border-block-end-300">What is Bookmark?</summary>
+                        <summary>What is Bookmark?</summary>
                         <p>Donec eget porttitor turpis, sed molestie odio. Suspendisse luctus nisl et nisl pharetra volutpat. Quisque lobortis sollicitudin mi non maximus.</p>
                     </details>
                     <details>
@@ -135,19 +135,19 @@
                         <p>Dapibus velit lectus quis sapien. Integer urna justo, finibus id fermentum vitae, convallis consequat nunc.</p>
                     </details>
                 </div>
-                <p class="mf-margin-block-7 mf-flex mf-justify-center"><button class="button-blue" type="button">More Info</button></p>
+                <p><button class="button-blue" type="button">More Info</button></p>
             </div>
         </section>
     </main>
-    <aside class="mf-padding-block-15 newsletter">
+    <aside class="newsletter">
         <div class="container text-align-center">
             <p>35.000+ Already Joined</p>
             <p>Stay up-to-date with what we're doing</p>
             <form action="#">
-                <div class="mf-grid mf-grid-6 mf-gap-4">
+                <div>
                     <label for="input-newsletter" class="screen-reader"></label>
-                    <input type="email" name="input-newsletter" id="input-newsletter" class="mf-grid-column-1-s-4">
-                    <button type="submit" class="button-red mf-lg-grid-column-5-s-2">Contact Us</button>
+                    <input type="email" name="input-newsletter" id="input-newsletter">
+                    <button type="submit" class="button-red">Contact Us</button>
                 </div>
             </form>
         </div>

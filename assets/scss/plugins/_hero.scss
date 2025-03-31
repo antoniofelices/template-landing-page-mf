@@ -5,7 +5,8 @@
  * Buttons.
  */
 #hero {
-    padding-block: variables.$spacing-11
+    padding-block: variables.$spacing-11;
+    @include mixins.background-shapes( $position: right )
 }
 
 .hero-container {
@@ -13,9 +14,27 @@
 }
 
 .hero-text {
-
+    h1, p {
+        text-align: center;
+    }
+    h1 {
+        margin-bottom: variables.$spacing-8;
+    }
+    p {
+        @include mixins.margin( $typeMargin: block, $spacing: variables.$spacing-7 )
+    }
 }
 
-.hero-image {
+@include mixins.breakpoint( lg ) {
+    .hero-text {
+        h1, p {
+            text-align: left;;
+        }
+        h1 {
+            margin-bottom: 0;
+        }
+        p {
 
+        }
+    }
 }

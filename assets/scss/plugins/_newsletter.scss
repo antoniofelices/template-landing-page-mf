@@ -20,6 +20,11 @@
         line-height: variables.$line-height-sm;
         margin-block: variables.$spacing-4;
     }
+    form {
+        > div {
+            @include mixins.grid( $gap-horizontal: variables.$spacing-4 );
+        }
+    }
 }
 
 @include mixins.breakpoint( xl ) {
@@ -33,6 +38,15 @@
         form {
             max-width: map.get(variables.$breakpoints, 'sm');
             margin-inline: auto;
+            > div {
+                grid-template-columns: repeat(6, 1fr);
+            }
+            input {
+                grid-column: 1/span 4;
+            }
+            button {
+                grid-column: 5/span 2;
+            }
         }
     }
 }

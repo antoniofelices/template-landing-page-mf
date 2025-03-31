@@ -22,7 +22,7 @@ summary {
     display: flex;
     font-size: variables.$font-size-lg;
     justify-content: space-between;
-    padding: variables.$spacing-5;
+    padding-block: variables.$spacing-5;
     @include mixins.border( $typeBorder: block-end, $color: variables.$color-gray-300 )
 }
 summary::marker {

@@ -7,10 +7,11 @@
 .card {
     background-color: variables.$color-white;
     border-radius: variables.$border-radius-base;
-    margin-inline: variables.$spacing-7;
+    // margin-inline: variables.$spacing-7;
     padding-block: variables.$spacing-10;
     padding-inline: variables.$spacing-7;
     @include mixins.flex( $direction: column );
+    @include mixins.box-shadow( $shadowInset: false );
     h3 {
         color: variables.$color-blue-900;
         font-size: variables.$font-size-lg;

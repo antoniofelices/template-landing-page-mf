@@ -13,6 +13,10 @@
     display: initial !important;
 }
 
+.container {
+    @include mixins.wrapper();
+}
+
 @media only screen and (max-width: 576px) {
     .sm-hide {
         display: none !important;
