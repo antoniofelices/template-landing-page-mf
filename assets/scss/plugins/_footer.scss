@@ -9,6 +9,7 @@
     background-color: variables.$color-blue-700;
     padding-block: variables.$spacing-10;
     > div {
+        justify-items: center;
         @include mixins.grid(
             $gap-horizontal: variables.$spacing-11,
             $gap-vertical: variables.$spacing-11,
@@ -28,6 +29,9 @@
         }
         a {
             color: variables.$color-gray-300;
+            &:hover, &:active, &:focus {
+                color: variables.$color-red;
+            }
         }
     }
     .social-menu {
@@ -36,6 +40,12 @@
         }
         li:first-of-type {
             padding-inline-end: variables.$spacing-4;
+        }
+        svg {
+            fill: variables.$color-white;
+            &:hover, &:active, &:focus {
+                fill: variables.$color-red;
+            }
         }
     }
 

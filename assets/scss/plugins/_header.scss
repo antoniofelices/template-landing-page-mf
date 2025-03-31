@@ -19,10 +19,12 @@
         }
         li {
             padding-inline: variables.$spacing-4;
-
         }
         a {
             color: variables.$color-blue-900;
+            &:hover, &:active, &:focus {
+                color: variables.$color-red;
+            }
         }
    }
 }

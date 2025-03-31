@@ -11,7 +11,7 @@ const mobileMenu = () => {
     function toggleMobileMenu() {
         body.classList.toggle('h-dvh');
         body.classList.toggle('mf-overflow-y-hide');
-        containerNavHeader.classList.toggle('mf-sm-hide');
+        containerNavHeader.classList.toggle('sm-hide');
         // iconClose.classList.toggle('mf-sm-hide');
         // iconOpen.classList.toggle('mf-sm-hide');
     }

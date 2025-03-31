@@ -22,7 +22,14 @@
     }
     form {
         > div {
-            @include mixins.grid( $gap-horizontal: variables.$spacing-4 );
+            @include mixins.grid( $gap-horizontal: variables.$spacing-4, $gap-vertical: variables.$spacing-4 );
+        }
+        button {
+            @include mixins.button(
+                $bgcolor: variables.$color-red,
+                $hoverbgcolor: variables.$color-white,
+                $hovercolor: variables.$color-red
+            );
         }
     }
 }

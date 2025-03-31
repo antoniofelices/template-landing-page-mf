@@ -10,10 +10,13 @@
 }
 
 .hero-container {
+    grid-template-areas: "heroimage"
+                        "herotext";
     @include mixins.grid( $template-columns: repeat(2, 1fr) );
 }
 
 .hero-text {
+    grid-area: herotext;
     h1, p {
         text-align: center;
     }
@@ -25,7 +28,21 @@
     }
 }
 
+.hero-buttons {
+    @include mixins.flex( $gap: variables.$spacing-4 );
+    button {
+        padding-inline: variables.$spacing-4;
+    }
+}
+
+.hero-image {
+    grid-area: heroimage
+}
+
 @include mixins.breakpoint( lg ) {
+    .hero-container {
+        grid-template-areas: "herotext heroimage"
+    }
     .hero-text {
         h1, p {
             text-align: left;;
@@ -35,6 +52,12 @@
         }
         p {
 
+        }
+    }
+    .hero-buttons {
+        justify-content: flex-start;
+        button {
+            padding-inline: variables.$spacing-6;
         }
     }
 }

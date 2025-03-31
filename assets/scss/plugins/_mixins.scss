@@ -49,17 +49,17 @@
 	$display: inline-block,
 	$fontsize: variables.$font-size-sm,
 	$fontweight: variables.$font-weight-bold,
-	$hovercolor: variables.$color-red,
-	$hoverbgcolor: variables.$color-red,
+	$hovercolor: variables.$color-blue,
+	$hoverbgcolor: transparent,
 	$padding: variables.$spacing-3 variables.$spacing-6,
 	$width: auto,
 ){
 	background-color: $bgcolor;
 	border-radius: $borderradius;
-	@include border( $color: $bordercolor );
+	@include border( $color: $bordercolor, $width: 2px );
 	color: $color;
 	display: $display;
-	font-size: $fontsize;
+	font-size: variables.$font-size-xs;
 	font-weight: $fontweight;
 	padding: $padding;
 	text-align: center;
@@ -67,11 +67,15 @@
 	width: $width;
 	&:hover, &:active, &:focus {
 		background-color: $hoverbgcolor;
-		border-color: $hoverbgcolor;
+		border-color: $hovercolor;
 		color: $hovercolor;
+		cursor: pointer;
 	}
 	a {
 		border-bottom: none;
+	}
+	@include breakpoint( lg ) {
+		font-size: $fontsize;
 	}
 }
 

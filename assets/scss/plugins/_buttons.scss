@@ -9,7 +9,7 @@
 }
 
 .button-red {
-    @include mixins.button( $bgcolor: variables.$color-red, $hovercolor: variables.$color-blue );
+    @include mixins.button( $bgcolor: variables.$color-red, $hovercolor: variables.$color-red );
 }
 
 .button-shadow {
@@ -17,19 +17,22 @@
         $bgcolor: transparent,
         $bordercolor: transparent,
         $color: variables.$color-gray,
-        $hovercolor: variables.$color-white
+        $hovercolor: variables.$color-gray-600
     );
+}
+
+.button-shadow {
     @include mixins.box-shadow($shadowInset: false, $color: variables.$color-gray-300 );
 }
 
 .button-red-sm {
+    letter-spacing: 1px;
+    text-transform: uppercase;
     @include mixins.button(
         $bgcolor: variables.$color-red,
         $bordercolor: variables.$color-red,
-        $hovercolor: variables.$color-blue,
+        $hovercolor: variables.$color-red,
         $fontweight: variables.$font-weight-normal,
         $padding: variables.$spacing-2 variables.$spacing-7
     );
-    letter-spacing: 1px;
-    text-transform: uppercase;
 }

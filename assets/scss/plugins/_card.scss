@@ -22,14 +22,14 @@
         font-size: variables.$font-size-sm;
     }
     button {
-        width: 100%;
+        font-size: variables.$font-size-xs;
     }
 }
 
 @include mixins.breakpoint( lg ) {
     .card {
         button {
-            width: auto;
+            width: 100%;
         }
     }
 }
