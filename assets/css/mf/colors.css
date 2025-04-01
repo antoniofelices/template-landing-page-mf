@@ -113,3 +113,25 @@
 .mf-bg-gray-600 {
     background-color: var(--mf-color-gray-600);
 }
+
+.mf-hover-color-red:hover,
+.mf-hover-color-red:active,
+.mf-hover-color-red:focus {
+    color: var(--mf-color-red);
+}
+
+.mf-hover-color-blue:hover,
+.mf-hover-color-blue:active,
+.mf-hover-color-blue:focus {
+    color: var(--mf-color-blue);
+}
+
+.mf-fill-white {
+    fill: white;
+}
+
+.mf-hover-fill-red:hover,
+.mf-hover-fill-red:active,
+.mf-hover-fill-red:focus {
+    fill: var(--mf-color-red);
+}

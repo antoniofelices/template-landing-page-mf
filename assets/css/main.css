@@ -758,6 +758,28 @@ details[open] summary:after {
 .mf-bg-gray-600 {
     background-color: var(--mf-color-gray-600);
 }
+
+.mf-hover-color-red:hover,
+.mf-hover-color-red:active,
+.mf-hover-color-red:focus {
+    color: var(--mf-color-red);
+}
+
+.mf-hover-color-blue:hover,
+.mf-hover-color-blue:active,
+.mf-hover-color-blue:focus {
+    color: var(--mf-color-blue);
+}
+
+.mf-fill-white {
+    fill: white;
+}
+
+.mf-hover-fill-red:hover,
+.mf-hover-fill-red:active,
+.mf-hover-fill-red:focus {
+    fill: var(--mf-color-red);
+}
 /*
  * Spacing.
  */
@@ -772,6 +794,10 @@ details[open] summary:after {
 */
 
 /* Width */
+.mf-width-100 {
+    width: 100%;
+}
+
 .mf-max-width-100vh {
     max-width: 100vh;
 }
@@ -1252,16 +1278,16 @@ details[open] summary:after {
         max-width: 50vh;
     }
 
-    .mf-lg-max-width-540 {
-        max-width: 540px;
+    .mf-lg-max-width-576 {
+        max-width: 576px;
     }
 
-    .mf-lg-max-width-720 {
-        max-width: 720px;
+    .mf-lg-max-width-768 {
+        max-width: 768px;
     }
 
-    .mf-lg-max-width-960 {
-        max-width: 960px;
+    .mf-lg-max-width-992 {
+        max-width: 992px;
     }
 
     /* TODO: revisit this */
@@ -1550,6 +1576,18 @@ details[open] summary:after {
     border-block-end: 1px solid var(--mf-color-gray-500);
 }
 
+.mf-border-blue {
+    border: 2px solid var(--mf-color-blue);
+}
+
+.mf-border-red {
+    border: 2px solid var(--mf-color-red);
+}
+
+.mf-border-transparent {
+    border: 2px solid transparent;
+}
+
 @media screen and (max-width: 540px) {
     .mf-sm-border-block-start-300 {
         border-block-start: 1px solid var(--mf-color-gray-300);
@@ -1683,6 +1721,38 @@ details[open] summary:after {
     grid-area: heroimage;
 }
 
+/* States */
+button.mf-bg-red:hover,
+button.mf-bg-red:active,
+button.mf-bg-red:focus {
+    background-color: transparent;
+    border: 2px solid var(--mf-color-red);
+    color: var(--mf-color-red);
+}
+
+button.mf-bg-blue:hover,
+button.mf-bg-blue:active,
+button.mf-bg-blue:focus {
+    background-color: transparent;
+    border: 2px solid var(--mf-color-blue);
+    color: var(--mf-color-blue);
+}
+
+button.mf-border-transparent:hover,
+button.mf-border-transparent:active,
+button.mf-border-transparent:focus {
+    background-color: transparent;
+    border: 2px solid var(--mf-color-gray-500);
+    color: var(--mf-color-gray-500);
+}
+
+.form-newsletter button:hover,
+.form-newsletter button:active,
+.form-newsletter button:focus {
+    background-color: var(--mf-color-white);
+}
+
+
 @media screen and (min-width: 1200px) {
     .hero-container {
         grid-template-areas: "herotext heroimage"
@@ -1699,5 +1769,27 @@ details[open] summary:after {
     .tab-active:after {
         inset-inline-start: 0;
         width: 100%;
+    }
+    .container-cards {
+        align-items: baseline;
+        gap: var(--mf-spacing-5);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 3rem);
+        grid-template-areas: 
+                            "card1 .     .    "
+                            "card1 card2 .    "
+                            "card1 card2 card3"
+                            ".     card2 card3"
+                            ".     .     card3";
+        padding-inline: 0;
+    }
+    .container-cards > div:nth-child(2) {
+        grid-area: card1;
+    }
+    .container-cards > div:nth-child(2) {
+        grid-area: card2;
+    }
+    .container-cards > div:nth-child(3) {
+        grid-area: card3;
     }
 }

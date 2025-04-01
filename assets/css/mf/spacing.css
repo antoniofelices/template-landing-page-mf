@@ -12,6 +12,10 @@
 */
 
 /* Width */
+.mf-width-100 {
+    width: 100%;
+}
+
 .mf-max-width-100vh {
     max-width: 100vh;
 }
@@ -492,16 +496,16 @@
         max-width: 50vh;
     }
 
-    .mf-lg-max-width-540 {
-        max-width: 540px;
+    .mf-lg-max-width-576 {
+        max-width: 576px;
     }
 
-    .mf-lg-max-width-720 {
-        max-width: 720px;
+    .mf-lg-max-width-768 {
+        max-width: 768px;
     }
 
-    .mf-lg-max-width-960 {
-        max-width: 960px;
+    .mf-lg-max-width-992 {
+        max-width: 992px;
     }
 
     /* TODO: revisit this */

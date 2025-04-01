@@ -34,6 +34,18 @@
     border-block-end: 1px solid var(--mf-color-gray-500);
 }
 
+.mf-border-blue {
+    border: 2px solid var(--mf-color-blue);
+}
+
+.mf-border-red {
+    border: 2px solid var(--mf-color-red);
+}
+
+.mf-border-transparent {
+    border: 2px solid transparent;
+}
+
 @media screen and (max-width: 540px) {
     .mf-sm-border-block-start-300 {
         border-block-start: 1px solid var(--mf-color-gray-300);
