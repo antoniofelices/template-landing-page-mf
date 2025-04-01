@@ -20,6 +20,11 @@
 
 .dropdown-toggle {
     fill: variables.$color-blue-900;
+    height: variables.$spacing-4;
+}
+
+.dropdown-toggle .close {
+    display: none;
 }
 
 #main-menu-header {
@@ -51,10 +56,16 @@
     img {
         filter: brightness(100);
     }
-    svg {
+    .dropdown-toggle {
         fill: variables.$color-white;
     }
-    button {
+    .dropdown-toggle .close {
+        display: initial;
+    }
+    .dropdown-toggle .open {
+        display: none;
+    }
+    .login-header {
         background-color: transparent;
         border-color: variables.$color-white;
         color: variables.$color-white;
@@ -69,7 +80,7 @@
     }
     #container-nav-header {
         background-color: rgba(variables.$color-blue-900, .9);
-        height: 90dvh; 
+        height: 100dvh; 
         inset-block: 0;
         inset-inline: -2rem -2rem;
         overflow: hidden;

@@ -810,6 +810,11 @@ input {
 
 .dropdown-toggle {
   fill: #080a16;
+  height: 1rem;
+}
+
+.dropdown-toggle .close {
+  display: none;
 }
 
 #main-menu-header ul {
@@ -844,10 +849,16 @@ input {
 .menu-active img {
   filter: brightness(100);
 }
-.menu-active svg {
+.menu-active .dropdown-toggle {
   fill: #ffffff;
 }
-.menu-active button {
+.menu-active .dropdown-toggle .close {
+  display: initial;
+}
+.menu-active .dropdown-toggle .open {
+  display: none;
+}
+.menu-active .login-header {
   background-color: transparent;
   border-color: #ffffff;
   color: #ffffff;
@@ -860,7 +871,7 @@ input {
 }
 .menu-active #container-nav-header {
   background-color: rgba(8, 10, 22, 0.9);
-  height: 90dvh;
+  height: 100dvh;
   inset-block: 0;
   inset-inline: -2rem -2rem;
   overflow: hidden;
