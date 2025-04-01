@@ -5,7 +5,7 @@
  * Footer.
  */
 
-#main-footer {
+#footer {
     background-color: variables.$color-blue-700;
     padding-block: variables.$spacing-10;
     > div {
@@ -52,7 +52,7 @@
 }
 
 @include mixins.breakpoint( lg ) {
-    #main-footer {
+    #footer {
         > div {
             justify-items: flex-start;
             gap: variables.$spacing-7

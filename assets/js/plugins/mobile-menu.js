@@ -1,6 +1,7 @@
 const mobileMenu = () => {
 
     const body = document.body;
+    const mainHeader = document.getElementById('header');
     const containerNavHeader = document.getElementById('container-nav-header');
     // const iconClose = document.getElementById('icon-close');
     // const iconOpen = document.getElementById('icon-open');
@@ -9,8 +10,10 @@ const mobileMenu = () => {
     if(!containerNavHeader) return;
 
     function toggleMobileMenu() {
-        body.classList.toggle('h-dvh');
-        body.classList.toggle('mf-overflow-y-hide');
+        // body.classList.toggle('h-dvh');
+        body.classList.toggle('overflow-y-hide');
+        mainHeader.classList.toggle('menu-active');
+
         containerNavHeader.classList.toggle('sm-hide');
         // iconClose.classList.toggle('mf-sm-hide');
         // iconOpen.classList.toggle('mf-sm-hide');

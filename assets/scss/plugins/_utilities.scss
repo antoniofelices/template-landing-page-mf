@@ -13,6 +13,10 @@
     display: initial !important;
 }
 
+.overflow-y-hide {
+    overflow-y: hidden;
+}
+
 .container {
     @include mixins.wrapper();
 }
@@ -22,6 +26,15 @@
         display: none !important;
     }
     .sm-show {
+        display: initial !important;
+    }
+}
+
+@include mixins.breakpoint( lg ) {
+    .lg-hide {
+        display: none !important;
+    }
+    .lg-show {
         display: initial !important;
     }
 }

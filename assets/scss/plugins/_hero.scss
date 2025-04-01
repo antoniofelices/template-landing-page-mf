@@ -9,13 +9,13 @@
     @include mixins.background-shapes( $position: right )
 }
 
-.hero-container {
+.container-hero {
     grid-template-areas: "heroimage"
                         "herotext";
     @include mixins.grid( $template-columns: repeat(2, 1fr) );
 }
 
-.hero-text {
+.text-hero {
     grid-area: herotext;
     h1, p {
         text-align: center;
@@ -28,22 +28,22 @@
     }
 }
 
-.hero-buttons {
+.buttons-hero {
     @include mixins.flex( $gap: variables.$spacing-4 );
     button {
         padding-inline: variables.$spacing-4;
     }
 }
 
-.hero-image {
+.image-hero {
     grid-area: heroimage
 }
 
 @include mixins.breakpoint( lg ) {
-    .hero-container {
+    .container-hero {
         grid-template-areas: "herotext heroimage"
     }
-    .hero-text {
+    .text-hero {
         h1, p {
             text-align: left;;
         }
@@ -54,7 +54,7 @@
 
         }
     }
-    .hero-buttons {
+    .buttons-hero {
         justify-content: flex-start;
         button {
             padding-inline: variables.$spacing-6;

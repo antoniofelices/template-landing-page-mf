@@ -387,6 +387,10 @@ input:where([type=button], [type=reset], [type=submit]),
   display: initial !important;
 }
 
+.overflow-y-hide {
+  overflow-y: hidden;
+}
+
 .container {
   max-width: min(88vw, 1200px);
   margin-inline: auto;
@@ -397,6 +401,14 @@ input:where([type=button], [type=reset], [type=submit]),
     display: none !important;
   }
   .sm-show {
+    display: initial !important;
+  }
+}
+@media (min-width: 992px) {
+  .lg-hide {
+    display: none !important;
+  }
+  .lg-show {
     display: initial !important;
   }
 }
@@ -778,7 +790,9 @@ input {
 /*
  * Header.
  */
-#main-header {
+#header {
+  padding-block: clamp(2rem, 2vw, 5rem);
+  position: relative;
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -786,9 +800,19 @@ input {
   justify-content: space-between;
   max-width: min(88vw, 1200px);
   margin-inline: auto;
-  padding-block: clamp(2rem, 2vw, 5rem);
 }
-#main-header .main-menu ul {
+
+.site-icon,
+#mobile-dropdown-toggle {
+  position: static;
+  z-index: 2;
+}
+
+.dropdown-toggle {
+  fill: #080a16;
+}
+
+#main-menu-header ul {
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -799,26 +823,65 @@ input {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-#main-header .main-menu li {
+#main-menu-header li {
   padding-inline: 1rem;
 }
-#main-header .main-menu a {
+#main-menu-header a {
   color: #080a16;
 }
-#main-header .main-menu a:hover, #main-header .main-menu a:active, #main-header .main-menu a:focus {
+#main-menu-header a:hover, #main-menu-header a:active, #main-menu-header a:focus {
   color: #fb5859;
 }
 
-#container-nav-header {
+.social-menu ul {
   align-items: center;
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.menu-active img {
+  filter: brightness(100);
+}
+.menu-active svg {
+  fill: #ffffff;
+}
+.menu-active button {
+  background-color: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+  width: 100%;
+}
+.menu-active #main-menu-header a {
+  color: #ffffff;
+  font-size: 1.266rem;
+  text-transform: uppercase;
+}
+.menu-active #container-nav-header {
+  background-color: rgba(8, 10, 22, 0.9);
+  height: 90dvh;
+  inset-block: 0;
+  inset-inline: -2rem -2rem;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
+.menu-active #container-nav-header > div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
 }
 
 @media (min-width: 992px) {
-  #main-header .main-menu ul {
+  #main-menu-header ul {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -826,8 +889,12 @@ input {
     justify-content: space-between;
     flex-direction: row;
   }
-  #container-nav-header {
+  #container-nav-header > div {
+    align-items: center;
+    display: flex;
     flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
   }
   #mobile-dropdown-toggle {
     display: none;
@@ -863,7 +930,7 @@ input {
   }
 }
 
-.hero-container {
+.container-hero {
   grid-template-areas: "heroimage" "herotext";
   align-items: center;
   display: grid;
@@ -871,53 +938,53 @@ input {
   grid-template-columns: 1fr;
 }
 @media (min-width: 1200px) {
-  .hero-container {
+  .container-hero {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.hero-text {
+.text-hero {
   grid-area: herotext;
 }
-.hero-text h1, .hero-text p {
+.text-hero h1, .text-hero p {
   text-align: center;
 }
-.hero-text h1 {
+.text-hero h1 {
   margin-bottom: 3rem;
 }
-.hero-text p {
+.text-hero p {
   margin-block: 2rem;
 }
 
-.hero-buttons {
+.buttons-hero {
   align-items: center;
   display: flex;
   flex-direction: row;
   gap: 1rem;
   justify-content: center;
 }
-.hero-buttons button {
+.buttons-hero button {
   padding-inline: 1rem;
 }
 
-.hero-image {
+.image-hero {
   grid-area: heroimage;
 }
 
 @media (min-width: 992px) {
-  .hero-container {
+  .container-hero {
     grid-template-areas: "herotext heroimage";
   }
-  .hero-text h1, .hero-text p {
+  .text-hero h1, .text-hero p {
     text-align: left;
   }
-  .hero-text h1 {
+  .text-hero h1 {
     margin-bottom: 0;
   }
-  .hero-buttons {
+  .buttons-hero {
     justify-content: flex-start;
   }
-  .hero-buttons button {
+  .buttons-hero button {
     padding-inline: 1.5rem;
   }
 }
@@ -1135,11 +1202,11 @@ input {
 /*
  * Footer.
  */
-#main-footer {
+#footer {
   background-color: #242946;
   padding-block: clamp(2rem, 2vw, 5rem);
 }
-#main-footer > div {
+#footer > div {
   justify-items: center;
   align-items: center;
   display: grid;
@@ -1147,11 +1214,11 @@ input {
   grid-template-columns: 1fr;
 }
 @media (min-width: 1200px) {
-  #main-footer > div {
+  #footer > div {
     grid-template-columns: repeat(6, 1fr);
   }
 }
-#main-footer .main-menu ul {
+#footer .main-menu ul {
   font-size: 0.889rem;
   letter-spacing: 1px;
   text-align: center;
@@ -1162,48 +1229,48 @@ input {
   gap: 2rem;
   justify-content: center;
 }
-#main-footer .main-menu li {
+#footer .main-menu li {
   padding-inline: 1rem;
 }
-#main-footer .main-menu a {
+#footer .main-menu a {
   color: #c8c9cb;
 }
-#main-footer .main-menu a:hover, #main-footer .main-menu a:active, #main-footer .main-menu a:focus {
+#footer .main-menu a:hover, #footer .main-menu a:active, #footer .main-menu a:focus {
   color: #fb5859;
 }
-#main-footer .social-menu ul {
+#footer .social-menu ul {
   align-items: center;
   display: flex;
   flex-direction: row;
   gap: 2rem;
   justify-content: center;
 }
-#main-footer .social-menu li:first-of-type {
+#footer .social-menu li:first-of-type {
   padding-inline-end: 1rem;
 }
-#main-footer .social-menu svg {
+#footer .social-menu svg {
   fill: #ffffff;
 }
-#main-footer .social-menu svg:hover, #main-footer .social-menu svg:active, #main-footer .social-menu svg:focus {
+#footer .social-menu svg:hover, #footer .social-menu svg:active, #footer .social-menu svg:focus {
   fill: #fb5859;
 }
 
 @media (min-width: 992px) {
-  #main-footer > div {
+  #footer > div {
     justify-items: flex-start;
     gap: 2rem;
   }
-  #main-footer .site-icon {
+  #footer .site-icon {
     grid-column: 1/2;
   }
-  #main-footer .main-menu {
+  #footer .main-menu {
     grid-column: 2/6;
   }
-  #main-footer .main-menu ul {
+  #footer .main-menu ul {
     flex-direction: row;
     text-align: left;
   }
-  #main-footer .social-menu {
+  #footer .social-menu {
     grid-column: 6/span 1;
     justify-self: flex-end;
   }
