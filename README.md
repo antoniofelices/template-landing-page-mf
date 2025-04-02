@@ -21,9 +21,8 @@ A landing page. Three versions: Vanilla, Sass, TailwindCSS. Each version has its
 1. Clone the repo: 
 2. Install all ``npm install``
 3. Run develop ``npm run start``
-4. Copy and rename /assets/css/mf/variables.css to /assets/css/custom-variables.css.
-5. Uncomment line /assets/css/custom-variables.css on gulpfile.js
-6. Modify custom-variables.css
+4. Modify variables /assets/css/input.css
+5. That's it.
 
 ## Contributing
 

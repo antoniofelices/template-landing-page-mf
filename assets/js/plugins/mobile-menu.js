@@ -20,14 +20,6 @@ const mobileMenu = () => {
         closePathIcon.classList.toggle('hidden')
     }
 
-    // function closeMobileMenu() {
-    //     body.classList.remove('h-dvh')
-    //     body.classList.remove('mf-overflow-y-hide')
-    //     containerNavHeader.classList.add('mf-sm-hide')
-    //     iconClose.classList.add('mf-sm-hide')
-    //     iconOpen.classList.remove('mf-sm-hide')
-    // }
-
     // function handleOutsideClick(event) {
     //     const target = event.target
     //     if (!target.closest('#container-nav-header') && !target.closest('.mobile-dropdown-toggle')) {
