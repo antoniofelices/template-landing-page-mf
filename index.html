@@ -11,34 +11,59 @@
     <script src="/assets/js/main.js" defer type="module"></script>
 </head>
 <body>
-    <header id="main-header" class="container max-w-5xl flex justify-between py-10 items-center @container/header">
-        <div class="site-icon">
-            <a href="/" arial-label="link to frontpage"><img src="/assets/images/logo-bookmark.svg" alt="logo bookmark" class="logo-bookmark"></a>
+    <header id="header" class="container max-w-5xl relative flex justify-between py-10 items-center @container/header">
+        <div class="site-icon static z-2">
+            <a href="/" arial-label="link to frontpage"><img src="/assets/images/logo-bookmark.svg" alt="logo bookmark" id="logo-bookmark"></a>
         </div>
-        <button id="mobile-dropdown-toggle" class="lg:hidden" arial-label="access to menu"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" arial-hidden="true"><path fill="#242A45" fill-rule="evenodd" d="M0 0h18v3H0V0zm0 6h18v3H0V6zm0 6h18v3H0v-3z"/></svg></button>
-        <div id="container-nav-header" class="flex lg:place-content-between flex-col lg:flex-row items-center container-nav mf-sm-hide">
-            <nav class="main-menu">
-                <ul class="flex lg:place-content-between flex-col lg:flex-row text-sm uppercase tracking-wide">
-                    <li class="px-4"><a href="#" class="text-blue-900 hover:text-red">Features</a></li>
-                    <li class="px-4"><a href="#" class="text-blue-900 hover:text-red">Pricing</a></li>
-                    <li class="px-4"><a href="#" class="text-blue-900 hover:text-red">Contact</a></li>
+        <button id="mobile-dropdown-toggle" arial-label="access to menu" type="button" class="static z-2 lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15" arial-hidden="true" class="dropdown-toggle h-[1rem]">
+                <path class="open fill-blue-900" fill-rule="evenodd" d="M0 0h18v3H0V0zm0 6h18v3H0V6zm0 6h18v3H0v-3z"/>
+                <path class="close hidden fill-white" fill-rule="evenodd" d="M8 5.379L13.303.075l2.122 2.122L10.12 7.5l5.304 5.303-2.122 2.122L8 9.62l-5.303 5.304-2.122-2.122L5.88 7.5.575 2.197 2.697.075 8 5.38z"/>
+            </svg>
+        </button>
+        <div id="container-nav-header" class="hidden bg-blue-900/90 fixed h-dvh w-dvw top-0 left-0 z-1 lg:bg-transparent lg:static lg:h-auto lg:w-auto lg:block">
+            <div class="flex lg:place-content-between flex-col pt-[8rem] h-1/2 lg:flex-row lg:pt-0 lg:gap-4 lg:h-auto items-center">
+                <nav class="main-menu w-[90%] lg:w-auto">
+                    <ul class="flex text-md text-center flex-col uppercase tracking-wide lg:text-left lg:flex-row lg:gap-7 lg:text-sm lg:place-content-between">
+                        <li class="px-4 py-6 border-t border-gray-500 lg:border-t-0 lg:py-0"><a href="#" class="text-white lg:text-blue-900 hover:text-red">Features</a></li>
+                        <li class="px-4 py-6 border-t border-gray-500 lg:border-t-0 lg:py-0"><a href="#" class="text-white lg:text-blue-900 hover:text-red">Pricing</a></li>
+                        <li class="px-4 py-6 border-t border-b border-gray-500 lg:border-0 lg:py-0"><a href="#" class="text-white lg:text-blue-900 hover:text-red">Contact</a></li>
+                    </ul>
+                </nav>
+                <button type="button" class="border-2 rounded-lg text-white text-md lg:text-sm mt-6 uppercase px-7 tracking-wide py-2 w-[90%] lg:bg-red lg:border-red lg:mt-0 lg:w-auto hover:text-red hover:bg-transparent hover:border-red">Login</button>
+            </div>
+            <nav class="social-menu lg:hidden pt-[6rem] lg:pt-0">
+                <ul class="flex items-center justify-center gap-7">
+                    <li>
+                        <a href="#" arial-label="link to facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" arial-hidden="true" class="fill-white h-[1.5rem]">
+                                <path fill-rule="evenodd" d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" arial-label="link to twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" arial-hidden="true" class="fill-white h-[1.5rem]">
+                                <path fill-rule="evenodd" d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"/>
+                            </svg>
+                        </a>
+                    </li>
                 </ul>
             </nav>
-            <button type="button" class="bg-red border-red border-2 rounded-lg text-white text-sm uppercase py-2 px-7 mf-lg-grid-column-5-s-2 tracking-wide hover:text-red hover:bg-transparent hover:border-red">Login</button>
         </div>
     </header>
     <main>
         <section id="hero" class="py-11 mf-bg-bubble-shape mf-bg-bubble-shape-bottom-right @container/header">
             <div class="container max-w-5xl grid lg:grid-cols-2 lg:gap-(--spacing-7) lg:text-center hero-container">
-                <div class="hero-text">
+                <div class="hero-text order-2 lg:order-1">
                     <h1 class="font-bold text-blue-900 text-center lg:text-left my-8 text-3xl lg:text-4xl mf-line-height-xs">A Simple Bookmark Manager</h1>
                     <p class="text-center lg:text-left my-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus arcu, commodo sit amet mollis quis, euismod nec metus. Praesent sed scelerisque tellus. Integer auctor suscipit purus.</p>
-                    <div class="flex gap-4">
-                        <button class="bg-blue border-blue border-2 rounded-lg text-white text-sm font-bold py-3 px-6 hover:bg-transparent hover:border-blue hover:text-blue" type="button">Get It On Chrome</button>
-                        <button class="border-2 rounded-lg text-sm font-bold py-3 px-6 shadow-lg shadow-gray-300/100 hover:border-gray-500 hover:text-gray-500 hover:shadow-none" type="button">Get It On Firefox</button>
+                    <div class="flex gap-2 justify-center lg:justify-start">
+                        <button class="bg-blue border-blue border-2 rounded-lg text-white text-sm font-bold py-3 px-3 lg:px-6 hover:bg-transparent hover:border-blue hover:text-blue" type="button">Get It On Chrome</button>
+                        <button class="border-2 rounded-lg text-sm font-bold py-3 px-3 lg:px-6 shadow-lg shadow-gray-300/100 hover:border-gray-500 hover:text-gray-500 hover:shadow-none" type="button">Get It On Firefox</button>
                     </div>
                 </div>
-                <figure class="hero-image">
+                <figure class="hero-image order-1 lg:order-2">
                     <img src="/assets/images/illustration-hero.svg" alt="A beautiful illustration backend app.">
                 </figure>
             </div>
@@ -52,7 +77,7 @@
                     <button type="button" data-tab="speedy-searching" class="py-4 border-b border-gray-300">Speedy Searching</button>
                     <button type="button" data-tab="easy-sharing" class="py-4 border-b border-gray-300">Easy Sharing</button>
                 </nav>
-                <div id="simple-bookmarking" class="mf-content-tab">
+                <div id="simple-bookmarking" class="content-tab hidden show">
                     <div class="grid lg:grid-cols-2 lg:gap-(--spacing-7) items-center">
                         <img src="/assets/images/illustration-features-tab-1.svg" alt="backend app">
                         <div class="my-7">
@@ -62,7 +87,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="speedy-searching" class="mf-content-tab hidden">
+                <div id="speedy-searching" class="content-tab hidden">
                     <div class="grid lg:grid-cols-2 lg:gap-(--spacing-7) items-center">
                         <img src="/assets/images/illustration-features-tab-2.svg" alt="backend app">
                         <div>
@@ -72,7 +97,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="easy-sharing" class="mf-content-tab hidden">
+                <div id="easy-sharing" class="content-tab hidden">
                     <div class="grid lg:grid-cols-2 lg:gap-(--spacing-7) items-center">
                         <img src="/assets/images/illustration-features-tab-3.svg" alt="backend app">
                         <div>
@@ -147,7 +172,7 @@
             </form>
         </div>
     </aside>
-    <footer id="main-footer" class="py-10 bg-blue-700 @container/footer">
+    <footer id="footer" class="py-10 bg-blue-700 @container/footer">
         <div class="container max-w-5xl grid lg:grid-cols-6 items-center justify-center lg:justify-start gap-7">
             <div class="site-icon lg:col-span-1">
                 <a href="/" arial-label="link to frontpage"><img src="/assets/images/logo-bookmark-white.svg" alt="logo bookmark" class="logo-bookmark">
@@ -155,14 +180,14 @@
             </div>
             <nav class="main-menu lg:col-start-2 lg:col-end-6">
                 <ul class="flex flex-col lg:flex-row text-sm uppercase tracking-wide text-center lg:text-left">
-                    <li class="px-4"><a href="#" class="text-gray-300 hover:text-red">Featured</a></li>
-                    <li class="px-4"><a href="#" class="text-gray-300 hover:text-red">Pricing</a></li>
-                    <li class="px-4"><a href="#" class="text-gray-300 hover:text-red">Contact</a></li>
+                    <li class="px-4 py-3 lg:py-0"><a href="#" class="text-gray-300 hover:text-red">Featured</a></li>
+                    <li class="px-4 py-3 lg:py-0"><a href="#" class="text-gray-300 hover:text-red">Pricing</a></li>
+                    <li class="px-4 py-3 lg:py-0"><a href="#" class="text-gray-300 hover:text-red">Contact</a></li>
                 </ul>
             </nav>
             <nav class="social-menu lg:col-start-6 lg:col-end-7 lg:justify-self-end">
                 <ul class="flex items-center justify-center">
-                    <li class="pe-4"><a href="#" arial-label="link to facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="fill-white hover:fill-red"><path fill-rule="evenodd" d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg></a></li>
+                    <li class="pe-6"><a href="#" arial-label="link to facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="fill-white hover:fill-red"><path fill-rule="evenodd" d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg></a></li>
                     <li><a href="#" arial-label="link to twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" class="fill-white hover:fill-red"><path fill-rule="evenodd" d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"/></svg></a></li>
                 </ul>
             </nav>

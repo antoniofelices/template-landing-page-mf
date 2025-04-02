@@ -76,7 +76,7 @@
 
 @utility container {
   margin-inline: auto;
-  padding-inline: 1rem;
+  padding-inline: 2rem;
 }
 
 /*
@@ -105,5 +105,8 @@
   details[open] summary svg {
     transform: rotate(180deg);
     transition: transform .25s ease-in-out;
+  }
+  .show {
+    display: block !important;
   }
 }
