@@ -1,14 +1,17 @@
 const mobileMenu = () => {
-
     const body = document.body
     const header = document.getElementById('header')
     const logo = document.getElementById('logo-bookmark')
     const containerNavHeader = document.getElementById('container-nav-header')
-    const mobileDropdownToggleButton = document.getElementById('mobile-dropdown-toggle')
+    const mobileDropdownToggleButton = document.getElementById(
+        'mobile-dropdown-toggle'
+    )
     const openPathIcon = document.querySelector('#mobile-dropdown-toggle .open')
-    const closePathIcon = document.querySelector('#mobile-dropdown-toggle .close')
-    
-    if(!containerNavHeader) return;
+    const closePathIcon = document.querySelector(
+        '#mobile-dropdown-toggle .close'
+    )
+
+    if (!containerNavHeader) return
 
     function toggleMobileMenu() {
         body.classList.toggle('overflow-y-hidden')
@@ -29,9 +32,8 @@ const mobileMenu = () => {
     //     }
     // }
 
-    mobileDropdownToggleButton.addEventListener('click', toggleMobileMenu);
+    mobileDropdownToggleButton.addEventListener('click', toggleMobileMenu)
     // document.addEventListener('click', handleOutsideClick)
-
 }
 
 export default mobileMenu
