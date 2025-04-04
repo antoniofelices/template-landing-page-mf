@@ -1,6 +1,6 @@
-@use "sass:map";
-@use "../variables";
-@use "mixins";
+@use 'sass:map';
+@use '../variables';
+@use 'mixins';
 
 /*
  * Newsletter.
@@ -22,7 +22,10 @@
     }
     form {
         > div {
-            @include mixins.grid( $gap-horizontal: variables.$spacing-4, $gap-vertical: variables.$spacing-4 );
+            @include mixins.grid(
+                $gap-horizontal: variables.$spacing-4,
+                $gap-vertical: variables.$spacing-4
+            );
         }
         button {
             @include mixins.button(
@@ -34,7 +37,7 @@
     }
 }
 
-@include mixins.breakpoint( xl ) {
+@include mixins.breakpoint(xl) {
     .newsletter {
         p:nth-child(2) {
             font-size: variables.$font-size-3xl;
@@ -49,10 +52,10 @@
                 grid-template-columns: repeat(6, 1fr);
             }
             input {
-                grid-column: 1/span 4;
+                grid-column: 1 / span 4;
             }
             button {
-                grid-column: 5/span 2;
+                grid-column: 5 / span 2;
             }
         }
     }

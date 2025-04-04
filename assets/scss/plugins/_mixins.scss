@@ -1,162 +1,166 @@
-@use "sass:map";
-@use "../variables";
+@use 'sass:map';
+@use '../variables';
 
 /*
  * Mixins.
  */
 
-@mixin background-shapes( $position: right ) {
+@mixin background-shapes($position: right) {
     position: relative;
-	&:after {
-		content: '';
-		display: block;
-		width: 300px;
-		height: 240px;
-		background-color: variables.$color-blue;
-		position: absolute;
-		z-index: -10;
-		@if $position == right {
-			border-radius: 0 0 0 50%;
-			inset-block-end: 60%;
-			inset-inline-end: 0;
-		}
-		@else {
-			border-radius: 0 0 50% 0;
-			inset-block-end: 25%;
-			inset-inline-start: 0;
-		}
-	}
-	@include breakpoint( lg ) {
-		&:after {
-			width: 40%;
-			@if $position == right {
-				height: 60%;
-				inset-block-end: 0;
-			}
-			@else {
-				height: 40%;
-				inset-block-end: 0;
-			}
-		}
-	}
+    &:after {
+        content: '';
+        display: block;
+        width: 300px;
+        height: 240px;
+        background-color: variables.$color-blue;
+        position: absolute;
+        z-index: -10;
+        @if $position == right {
+            border-radius: 0 0 0 50%;
+            inset-block-end: 60%;
+            inset-inline-end: 0;
+        } @else {
+            border-radius: 0 0 50% 0;
+            inset-block-end: 25%;
+            inset-inline-start: 0;
+        }
+    }
+    @include breakpoint(lg) {
+        &:after {
+            width: 40%;
+            @if $position == right {
+                height: 60%;
+                inset-block-end: 0;
+            } @else {
+                height: 40%;
+                inset-block-end: 0;
+            }
+        }
+    }
 }
 
 @mixin button(
-	$bgcolor: variables.$color-blue,
-	$bordercolor: variables.$color-blue,
-	$borderradius: variables.$border-radius-base,
-	$color: variables.$color-white,
-	$display: inline-block,
-	$fontsize: variables.$font-size-sm,
-	$fontweight: variables.$font-weight-bold,
-	$hovercolor: variables.$color-blue,
-	$hoverbgcolor: transparent,
-	$padding: variables.$spacing-3 variables.$spacing-6,
-	$width: auto,
-){
-	background-color: $bgcolor;
-	border-radius: $borderradius;
-	@include border( $color: $bordercolor, $width: 2px );
-	color: $color;
-	display: $display;
-	font-size: variables.$font-size-xs;
-	font-weight: $fontweight;
-	padding: $padding;
-	text-align: center;
-	transition: all .3s ease;
-	width: $width;
-	&:hover, &:active, &:focus {
-		background-color: $hoverbgcolor;
-		border-color: $hovercolor;
-		color: $hovercolor;
-		cursor: pointer;
-	}
-	a {
-		border-bottom: none;
-	}
-	@include breakpoint( lg ) {
-		font-size: $fontsize;
-	}
+    $bgcolor: variables.$color-blue,
+    $bordercolor: variables.$color-blue,
+    $borderradius: variables.$border-radius-base,
+    $color: variables.$color-white,
+    $display: inline-block,
+    $fontsize: variables.$font-size-sm,
+    $fontweight: variables.$font-weight-bold,
+    $hovercolor: variables.$color-blue,
+    $hoverbgcolor: transparent,
+    $padding: variables.$spacing-3 variables.$spacing-6,
+    $width: auto
+) {
+    background-color: $bgcolor;
+    border-radius: $borderradius;
+    @include border($color: $bordercolor, $width: 2px);
+    color: $color;
+    display: $display;
+    font-size: variables.$font-size-xs;
+    font-weight: $fontweight;
+    padding: $padding;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: $width;
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $hoverbgcolor;
+        border-color: $hovercolor;
+        color: $hovercolor;
+        cursor: pointer;
+    }
+    a {
+        border-bottom: none;
+    }
+    @include breakpoint(lg) {
+        font-size: $fontsize;
+    }
 }
 
-@mixin breakpoint( $breakpoint ) {
-	@if map.has-key(variables.$breakpoints, $breakpoint) {
-		@media ( min-width: #{ map.get( variables.$breakpoints, $breakpoint ) }) {
-			@content;
-		}
-	}
-	@else {
-		@warn "No value could be retrieved from `#{$breakpoint}`.";
-	}
+@mixin breakpoint($breakpoint) {
+    @if map.has-key(variables.$breakpoints, $breakpoint) {
+        @media ( min-width: #{ map.get( variables.$breakpoints, $breakpoint ) }) {
+            @content;
+        }
+    } @else {
+        @warn "No value could be retrieved from `#{$breakpoint}`.";
+    }
 }
 
-@mixin border( $typeBorder: all, $width: 1px, $style: solid, $color: currentColor ) {
-	@if $typeBorder == all {
-		border: $width $style $color;
-	}
-	@else {
-		border-#{$typeBorder}: $width $style $color;
-	}
+@mixin border(
+    $typeBorder: all,
+    $width: 1px,
+    $style: solid,
+    $color: currentColor
+) {
+    @if $typeBorder == all {
+        border: $width $style $color;
+    } @else {
+        border-#{$typeBorder}: $width $style $color;
+    }
 }
 
-@mixin border-radius( $size: variables.$border-radius-base ) {
+@mixin border-radius($size: variables.$border-radius-base) {
     border-radius: $size;
 }
 
-@mixin box-shadow( $shadowInset: true, $blur: variables.$spacing-1, $color: variables.$color-gray-200 ) {
-	@if $shadowInset {
-		box-shadow: inset 0px 0px $blur $color;
-	}
-	@else {
-		box-shadow: 0px 2px $blur $color;
-	}	
-}
-
-@mixin container-max( $breakpoint ) {
-	@media only screen and (min-width: 1200px) {
-		@if map.has-key(variables.$breakpoints, $breakpoint) {
-			max-width: #{ map.get( variables.$breakpoints, $breakpoint ) };
-			margin-inline: auto;
-		}		
-	}
-}
-
-@mixin flex( 
-	$align-items: center,
-	$gap: variables.$spacing-7,
-	$direction: row,
-	$justify-content: center
+@mixin box-shadow(
+    $shadowInset: true,
+    $blur: variables.$spacing-1,
+    $color: variables.$color-gray-200
 ) {
-	align-items: $align-items;
-	display: flex;
-	flex-direction: $direction;
-	gap: $gap;
-	justify-content: $justify-content;
+    @if $shadowInset {
+        box-shadow: inset 0px 0px $blur $color;
+    } @else {
+        box-shadow: 0px 2px $blur $color;
+    }
+}
+
+@mixin container-max($breakpoint) {
+    @media only screen and (min-width: 1200px) {
+        @if map.has-key(variables.$breakpoints, $breakpoint) {
+            max-width: #{map.get(variables.$breakpoints, $breakpoint)};
+            margin-inline: auto;
+        }
+    }
+}
+
+@mixin flex(
+    $align-items: center,
+    $gap: variables.$spacing-7,
+    $direction: row,
+    $justify-content: center
+) {
+    align-items: $align-items;
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+    justify-content: $justify-content;
 }
 
 @mixin grid(
-	$align-items: center,
-	$gap-vertical: variables.$spacing-7,
-	$gap-horizontal: variables.$spacing-7,
-	$template-columns: 1fr
+    $align-items: center,
+    $gap-vertical: variables.$spacing-7,
+    $gap-horizontal: variables.$spacing-7,
+    $template-columns: 1fr
 ) {
-	align-items: $align-items;
-	display: grid;
-	grid-gap: $gap-vertical $gap-horizontal;
-	grid-template-columns: 1fr;
-	@include breakpoint( xl ) {
-		grid-template-columns: $template-columns;
-	}
-
+    align-items: $align-items;
+    display: grid;
+    grid-gap: $gap-vertical $gap-horizontal;
+    grid-template-columns: 1fr;
+    @include breakpoint(xl) {
+        grid-template-columns: $template-columns;
+    }
 }
 
-@mixin margin( $typeMargin: all, $spacing ) {
-	@if $typeMargin == all {
-		margin: $spacing;
-	}
-	@else {
-		margin-#{$typeMargin}: $spacing;
-	}	
+@mixin margin($typeMargin: all, $spacing) {
+    @if $typeMargin == all {
+        margin: $spacing;
+    } @else {
+        margin-#{$typeMargin}: $spacing;
+    }
 }
 
 @mixin wrapper() {

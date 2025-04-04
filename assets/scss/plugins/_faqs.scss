@@ -1,5 +1,5 @@
-@use "../variables";
-@use "mixins";
+@use '../variables';
+@use 'mixins';
 
 /*
  * Faqs.
@@ -8,7 +8,7 @@
     padding-block: variables.$spacing-11;
     .container > p:first-of-type {
         padding-block: variables.$spacing-10;
-        @include mixins.container-max( md );
+        @include mixins.container-max(md);
     }
     .container > p:last-of-type {
         margin-block: variables.$spacing-7;
@@ -17,16 +17,18 @@
 }
 
 .container-details {
-    @include mixins.container-max( md );
+    @include mixins.container-max(md);
     details:first-of-type {
         summary {
-            @include mixins.border( $typeBorder: block-start, $color: variables.$color-gray-300 );
+            @include mixins.border(
+                $typeBorder: block-start,
+                $color: variables.$color-gray-300
+            );
         }
     }
 }
 
-@include mixins.breakpoint( lg ) {
+@include mixins.breakpoint(lg) {
     #faqs {
-
     }
 }

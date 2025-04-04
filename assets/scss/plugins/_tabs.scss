@@ -1,5 +1,5 @@
-@use "../variables";
-@use "mixins";
+@use '../variables';
+@use 'mixins';
 
 /*
  * Tabs.
@@ -8,11 +8,18 @@
     font-size: variables.$font-size-base;
     padding-block: variables.$spacing-4;
     margin-block-end: variables.$spacing-9;
-    @include mixins.grid( $template-columns: repeat(5, 1fr), $gap-horizontal: 0, $gap-vertical: variables.$spacing-1 );
+    @include mixins.grid(
+        $template-columns: repeat(5, 1fr),
+        $gap-horizontal: 0,
+        $gap-vertical: variables.$spacing-1
+    );
     button {
         padding-block: variables.$spacing-4;
         width: 100%;
-        @include mixins.border( $typeBorder: block-end, $color: variables.$color-gray-300 );
+        @include mixins.border(
+            $typeBorder: block-end,
+            $color: variables.$color-gray-300
+        );
         &:hover {
             color: variables.$color-red;
             cursor: pointer;
@@ -20,7 +27,11 @@
     }
     .tab-active {
         color: variables.$color-blue-900;
-        @include mixins.border( $typeBorder: block-end, $color: variables.$color-red, $width: 4px );
+        @include mixins.border(
+            $typeBorder: block-end,
+            $color: variables.$color-red,
+            $width: 4px
+        );
     }
 }
 
@@ -33,7 +44,7 @@
     }
 }
 
-@include mixins.breakpoint( xl ) {
+@include mixins.breakpoint(xl) {
     .menu-tabs {
         justify-items: center;
         button:first-of-type {
@@ -42,7 +53,7 @@
     }
     .content-tab {
         > div {
-            @include mixins.grid( $template-columns: repeat(2, 1fr) )
+            @include mixins.grid($template-columns: repeat(2, 1fr));
         }
         h3 {
             text-align: left;

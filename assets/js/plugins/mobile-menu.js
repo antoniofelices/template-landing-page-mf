@@ -1,16 +1,17 @@
 const mobileMenu = () => {
+    const body = document.body
+    const mainHeader = document.getElementById('header')
+    const containerNavHeader = document.getElementById('container-nav-header')
+    const mobileDropdownToggleButton = document.getElementById(
+        'mobile-dropdown-toggle'
+    )
 
-    const body = document.body;
-    const mainHeader = document.getElementById('header');
-    const containerNavHeader = document.getElementById('container-nav-header');
-    const mobileDropdownToggleButton = document.getElementById('mobile-dropdown-toggle');
-    
-    if(!containerNavHeader) return;
+    if (!containerNavHeader) return
 
     function toggleMobileMenu() {
-        body.classList.toggle('overflow-y-hide');
-        mainHeader.classList.toggle('menu-active');
-        containerNavHeader.classList.toggle('sm-hide');
+        body.classList.toggle('overflow-y-hide')
+        mainHeader.classList.toggle('menu-active')
+        containerNavHeader.classList.toggle('sm-hide')
     }
 
     // function handleOutsideClick(event) {
@@ -22,9 +23,8 @@ const mobileMenu = () => {
     //     }
     // }
 
-    mobileDropdownToggleButton.addEventListener('click', toggleMobileMenu);
+    mobileDropdownToggleButton.addEventListener('click', toggleMobileMenu)
     // document.addEventListener('click', handleOutsideClick);
-
 }
 
 export default mobileMenu

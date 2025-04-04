@@ -1,4 +1,4 @@
-@use "../variables";
+@use '../variables';
 
 /*
  * Accesibility.
@@ -6,29 +6,29 @@
 
 .screen-reader {
     border: 0;
-	clip-path: inset(50%);
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute !important;
-	word-wrap: normal !important;
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    word-wrap: normal !important;
 }
 
-.screen-reader:focus{
-	clip-path: none;
-	height: auto;
-	width: auto;
-	position: static;
-	display: block;
-	font-size: variables.$font-size-base;
-	color: variables.$color-black;
-	background: variables.$color-white;
-	text-decoration: none;
-	box-shadow: 0px 2px variables.$spacing-1 variables.$color-gray-400;
+.screen-reader:focus {
+    clip-path: none;
+    height: auto;
+    width: auto;
+    position: static;
+    display: block;
+    font-size: variables.$font-size-base;
+    color: variables.$color-black;
+    background: variables.$color-white;
+    text-decoration: none;
+    box-shadow: 0px 2px variables.$spacing-1 variables.$color-gray-400;
 }
 
 :focus {
-	outline: 1px dotted variables.$color-gray-300;
+    outline: 1px dotted variables.$color-gray-300;
 }

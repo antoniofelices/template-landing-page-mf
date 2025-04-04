@@ -1,10 +1,15 @@
-@use "../variables";
-@use "mixins";
+@use '../variables';
+@use 'mixins';
 
 /*
  * Type.
  */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: variables.$color-blue-900;
     font-weight: variables.$font-weight-bold;
 }
@@ -28,7 +33,7 @@ h3 {
     text-align: center;
 }
 
-@include mixins.breakpoint( xl ) {
+@include mixins.breakpoint(xl) {
     h1 {
         font-size: variables.$font-size-4xl;
     }

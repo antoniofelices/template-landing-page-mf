@@ -1,5 +1,5 @@
-@use "../variables";
-@use "mixins";
+@use '../variables';
+@use 'mixins';
 
 /*
  * Card.
@@ -10,8 +10,8 @@
     // margin-inline: variables.$spacing-7;
     padding-block: variables.$spacing-10;
     padding-inline: variables.$spacing-7;
-    @include mixins.flex( $direction: column );
-    @include mixins.box-shadow( $shadowInset: false );
+    @include mixins.flex($direction: column);
+    @include mixins.box-shadow($shadowInset: false);
     h3 {
         color: variables.$color-blue-900;
         font-size: variables.$font-size-lg;
@@ -26,7 +26,7 @@
     }
 }
 
-@include mixins.breakpoint( lg ) {
+@include mixins.breakpoint(lg) {
     .card {
         button {
             width: 100%;

@@ -1,5 +1,5 @@
-@use "../variables";
-@use "mixins";
+@use '../variables';
+@use 'mixins';
 
 /*
  * Header.
@@ -8,7 +8,7 @@
 #header {
     padding-block: variables.$spacing-10;
     position: relative;
-    @include mixins.flex( $justify-content: space-between );
+    @include mixins.flex($justify-content: space-between);
     @include mixins.wrapper();
 }
 
@@ -29,7 +29,7 @@
 
 #main-menu-header {
     ul {
-        @include mixins.flex( $justify-content: space-between );
+        @include mixins.flex($justify-content: space-between);
         flex-direction: column;
         font-size: variables.$font-size-sm;
         letter-spacing: 1px;
@@ -40,7 +40,9 @@
     }
     a {
         color: variables.$color-blue-900;
-        &:hover, &:active, &:focus {
+        &:hover,
+        &:active,
+        &:focus {
             color: variables.$color-red;
         }
     }
@@ -79,29 +81,32 @@
         }
     }
     #container-nav-header {
-        background-color: rgba(variables.$color-blue-900, .9);
-        height: 100dvh; 
+        background-color: rgba(variables.$color-blue-900, 0.9);
+        height: 100dvh;
         inset-block: 0;
         inset-inline: -2rem -2rem;
         overflow: hidden;
         position: absolute;
         z-index: 1;
-        @include mixins.flex( $direction: column, $justify-content: space-evenly );
+        @include mixins.flex(
+            $direction: column,
+            $justify-content: space-evenly
+        );
     }
     #container-nav-header > div {
-        @include mixins.flex( $direction: column, $gap: variables.$spacing-7);
+        @include mixins.flex($direction: column, $gap: variables.$spacing-7);
     }
 }
 
-@include mixins.breakpoint( lg ) {
+@include mixins.breakpoint(lg) {
     #main-menu-header {
         ul {
-            @include mixins.flex( $justify-content: space-between );
+            @include mixins.flex($justify-content: space-between);
             flex-direction: row;
         }
     }
     #container-nav-header > div {
-        @include mixins.flex()
+        @include mixins.flex();
     }
     #mobile-dropdown-toggle {
         display: none;

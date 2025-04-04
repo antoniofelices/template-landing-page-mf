@@ -1,5 +1,4 @@
 const { dest, watch, src, series } = require('gulp');
-// const concat = require('gulp-concat');
 const sass = require('gulp-sass')(require('sass'));
 
 function styles() {

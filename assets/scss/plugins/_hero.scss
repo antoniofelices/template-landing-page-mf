@@ -1,57 +1,62 @@
-@use "../variables";
-@use "mixins";
+@use '../variables';
+@use 'mixins';
 
 /*
  * Buttons.
  */
 #hero {
     padding-block: variables.$spacing-11;
-    @include mixins.background-shapes( $position: right )
+    @include mixins.background-shapes($position: right);
 }
 
 .container-hero {
-    grid-template-areas: "heroimage"
-                        "herotext";
-    @include mixins.grid( $template-columns: repeat(2, 1fr) );
+    grid-template-areas:
+        'heroimage'
+        'herotext';
+    @include mixins.grid($template-columns: repeat(2, 1fr));
 }
 
 .text-hero {
     grid-area: herotext;
-    h1, p {
+    h1,
+    p {
         text-align: center;
     }
     h1 {
         margin-bottom: variables.$spacing-8;
     }
     p {
-        @include mixins.margin( $typeMargin: block, $spacing: variables.$spacing-7 )
+        @include mixins.margin(
+            $typeMargin: block,
+            $spacing: variables.$spacing-7
+        );
     }
 }
 
 .buttons-hero {
-    @include mixins.flex( $gap: variables.$spacing-4 );
+    @include mixins.flex($gap: variables.$spacing-4);
     button {
         padding-inline: variables.$spacing-4;
     }
 }
 
 .image-hero {
-    grid-area: heroimage
+    grid-area: heroimage;
 }
 
-@include mixins.breakpoint( lg ) {
+@include mixins.breakpoint(lg) {
     .container-hero {
-        grid-template-areas: "herotext heroimage"
+        grid-template-areas: 'herotext heroimage';
     }
     .text-hero {
-        h1, p {
-            text-align: left;;
+        h1,
+        p {
+            text-align: left;
         }
         h1 {
             margin-bottom: 0;
         }
         p {
-
         }
     }
     .buttons-hero {

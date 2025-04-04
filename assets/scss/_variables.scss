@@ -3,7 +3,13 @@
  */
 
 /* Breakpoints */
-$breakpoints: ( sm: 576px, md: 768px, lg: 992px, xl: 1200px, 2xl: 1400px );
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    2xl: 1400px,
+);
 
 /* Border Radius */
 $border-radius-xs: 2px !default;
@@ -33,7 +39,7 @@ $color-gray-600: #2c2c2e !default;
 $color-gray-700: #0f0f10 !default;
 
 /* Typography */
-$font-family-sans-serif: "Proxima Nova", sans-serif !default;
+$font-family-sans-serif: 'Proxima Nova', sans-serif !default;
 
 $font-size-xs: 0.79rem !default;
 $font-size-sm: 0.889rem !default;
@@ -51,9 +57,9 @@ $font-weight-semibold: 600 !default;
 $font-weight-bold: 700 !default;
 
 $line-height-xs: 1 !default;
-$line-height-sm: 1.20 !default;
+$line-height-sm: 1.2 !default;
 $line-height-base: 1.45 !default;
-$line-height-lg: 1.60 !default;
+$line-height-lg: 1.6 !default;
 
 /* Spacing */
 $spacing-0: 0 !default;

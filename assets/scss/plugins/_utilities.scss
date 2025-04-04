@@ -1,5 +1,5 @@
-@use "../variables";
-@use "mixins";
+@use '../variables';
+@use 'mixins';
 
 /*
  * Utilities.
@@ -30,7 +30,7 @@
     }
 }
 
-@include mixins.breakpoint( lg ) {
+@include mixins.breakpoint(lg) {
     .lg-hide {
         display: none !important;
     }

@@ -1,5 +1,5 @@
-@use "../variables";
-@use "mixins";
+@use '../variables';
+@use 'mixins';
 
 /*
  * Buttons.
@@ -9,7 +9,10 @@
 }
 
 .button-red {
-    @include mixins.button( $bgcolor: variables.$color-red, $hovercolor: variables.$color-red );
+    @include mixins.button(
+        $bgcolor: variables.$color-red,
+        $hovercolor: variables.$color-red
+    );
 }
 
 .button-shadow {
@@ -22,7 +25,10 @@
 }
 
 .button-shadow {
-    @include mixins.box-shadow($shadowInset: false, $color: variables.$color-gray-300 );
+    @include mixins.box-shadow(
+        $shadowInset: false,
+        $color: variables.$color-gray-300
+    );
 }
 
 .button-red-sm {

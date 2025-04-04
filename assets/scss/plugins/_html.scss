@@ -1,5 +1,5 @@
-@use "../variables";
-@use "mixins";
+@use '../variables';
+@use 'mixins';
 
 /*
  * HTML.
@@ -12,7 +12,9 @@ body {
     line-height: variables.$line-height-base;
 }
 
-p, ul, ol {
+p,
+ul,
+ol {
     font-size: variables.$font-size-base;
     line-height: variables.$line-height-base;
 }
@@ -23,7 +25,10 @@ summary {
     font-size: variables.$font-size-lg;
     justify-content: space-between;
     padding-block: variables.$spacing-5;
-    @include mixins.border( $typeBorder: block-end, $color: variables.$color-gray-300 )
+    @include mixins.border(
+        $typeBorder: block-end,
+        $color: variables.$color-gray-300
+    );
 }
 summary::marker {
     content: '';
@@ -32,7 +37,7 @@ summary:focus {
     outline: none;
 }
 summary:after {
-    content: url("../images/icon-arrow-blue.svg");
+    content: url('../images/icon-arrow-blue.svg');
 }
 details {
     margin-block: variables.$spacing-3;
@@ -42,6 +47,6 @@ details[open] summary {
 }
 details[open] summary:after {
     transform: rotate(180deg);
-    content: url("../images/icon-arrow-red.svg");
-    transition: transform .25s ease-in-out;
+    content: url('../images/icon-arrow-red.svg');
+    transition: transform 0.25s ease-in-out;
 }
