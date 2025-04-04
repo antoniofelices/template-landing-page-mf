@@ -1,0 +1,84 @@
+/*
+ * CSS custom properties.
+ */
+
+:root {
+    /* Breakpoints */
+    --mf-breakpoint-sm: 576px;
+    --mf-breakpoint-md: 768px;
+    --mf-breakpoint-lg: 992px;
+    --mf-breakpoint-xl: 1200px;
+    --mf-breakpoint-2xl: 1400px;
+
+    /* Border radius */
+    --mf-border-radius-xs: 2px;
+    --mf-border-radius-sm: 4px;
+    --mf-border-radius-base: 8px;
+    --mf-border-radius-lg: 12px;
+    --mf-border-radius-xl: 16px;
+
+    /* Content Size */
+    --mf-global-content-size: min(88vw, 1200px);
+
+    /* Colors */
+    --mf-color-blue: #5266df;
+    --mf-color-blue-100: #97a3eb;
+    --mf-color-blue-700: #242946;
+    --mf-color-blue-900: #080a16;
+    --mf-color-red: #fb5859;
+    --mf-color-white: #ffffff;
+    --mf-color-black: #000000;
+    --mf-color-gray: #96979b;
+    --mf-color-gray-100: #fafbfb;
+    --mf-color-gray-200: #e6e7e8;
+    --mf-color-gray-300: #c8c9cb;
+    --mf-color-gray-400: #a9a9a9;
+    --mf-color-gray-500: #78797e;
+    --mf-color-gray-600: #2c2c2e;
+    --mf-color-gray-700: #0f0f10;
+
+    /* Typography */
+    --mf-font-family-sans-serif: 'Proxima Nova', sans-serif;
+
+    --mf-font-size-xs: 0.79rem;
+    --mf-font-size-sm: 0.889rem;
+    --mf-font-size-base: 1.125rem;
+    --mf-font-size-lg: 1.266rem;
+    --mf-font-size-xl: 1.424rem;
+    --mf-font-size-2xl: 1.602rem;
+    --mf-font-size-3xl: 2.027rem;
+    --mf-font-size-4xl: 3.247rem;
+    --mf-font-size-5xl: 4.11rem;
+
+    --mf-font-weight-light: 300;
+    --mf-font-weight-normal: 400;
+    --mf-font-weight-semibold: 600;
+    --mf-font-weight-bold: 700;
+
+    --mf-line-height-xs: 1;
+    --mf-line-height-sm: 1.2;
+    --mf-line-height-base: 1.45;
+    --mf-line-height-lg: 1.6;
+
+    /* Spacing */
+    --mf-spacing-0: 0;
+    --mf-spacing-1: 0.25rem;
+    --mf-spacing-2: 0.5rem;
+    --mf-spacing-3: 0.75rem;
+    --mf-spacing-4: 1rem;
+    --mf-spacing-5: 1.25rem;
+    --mf-spacing-6: 1.5rem;
+    --mf-spacing-7: 2rem;
+    --mf-spacing-8: 3rem;
+    --mf-spacing-9: 4rem;
+    --mf-spacing-10: clamp(2rem, 2vw, 5rem);
+    --mf-spacing-11: clamp(3rem, 4vw, 6rem);
+    --mf-spacing-12: clamp(3rem, 6vw, 7rem);
+    --mf-spacing-13: clamp(3rem, 6vw, 8rem);
+    --mf-spacing-14: clamp(4rem, 6vw, 9rem);
+    --mf-spacing-15: clamp(4rem, 6vw, 10rem);
+    --mf-spacing-50vh: 50vh;
+    --mf-spacing-100vh: 100vh;
+    --mf-spacing-50vw: 50vw;
+    --mf-spacing-100vw: 100vw;
+}

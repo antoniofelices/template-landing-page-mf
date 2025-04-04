@@ -1,0 +1,87 @@
+/*
+ * Borders.
+ */
+
+.mf-border-block-start-200 {
+    border-block-start: 1px solid var(--mf-color-gray-200);
+}
+
+.mf-border-block-start-300 {
+    border-block-start: 1px solid var(--mf-color-gray-300);
+}
+
+.mf-border-block-start-400 {
+    border-block-start: 1px solid var(--mf-color-gray-400);
+}
+
+.mf-border-block-start-500 {
+    border-block-start: 1px solid var(--mf-color-gray-500);
+}
+
+.mf-border-block-end-200 {
+    border-block-end: 1px solid var(--mf-color-gray-200);
+}
+
+.mf-border-block-end-300 {
+    border-block-end: 1px solid var(--mf-color-gray-300);
+}
+
+.mf-border-block-end-400 {
+    border-block-end: 1px solid var(--mf-color-gray-400);
+}
+
+.mf-border-block-end-500 {
+    border-block-end: 1px solid var(--mf-color-gray-500);
+}
+
+.mf-border-blue {
+    border: 2px solid var(--mf-color-blue);
+}
+
+.mf-border-red {
+    border: 2px solid var(--mf-color-red);
+}
+
+.mf-border-transparent {
+    border: 2px solid transparent;
+}
+
+@media screen and (max-width: 540px) {
+    .mf-sm-border-block-start-300 {
+        border-block-start: 1px solid var(--mf-color-gray-300);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .mf-lg-border-block-start-200 {
+        border-block-start: 1px solid var(--mf-color-gray-200);
+    }
+
+    .mf-lg-border-block-start-300 {
+        border-block-start: 1px solid var(--mf-color-gray-300);
+    }
+
+    .mf-lg-border-block-start-400 {
+        border-block-start: 1px solid var(--mf-color-gray-400);
+    }
+
+    .mf-lg-border-block-start-500 {
+        border-block-start: 1px solid var(--mf-color-gray-500);
+    }
+
+    .mf-lg-border-block-end-200 {
+        border-block-end: 1px solid var(--mf-color-gray-200);
+    }
+
+    .mf-lg-border-block-end-300 {
+        border-block-end: 1px solid var(--mf-color-gray-300);
+    }
+
+    .mf-lg-border-block-end-400 {
+        border-block-end: 1px solid var(--mf-color-gray-400);
+    }
+
+    .mf-lg-border-block-end-500 {
+        border-block-end: 1px solid var(--mf-color-gray-500);
+    }
+}

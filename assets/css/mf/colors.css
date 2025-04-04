@@ -1,0 +1,137 @@
+/*
+ * Colors and backgrounds.
+ */
+
+.mf-color-blue {
+    color: var(--mf-color-blue);
+}
+
+.mf-color-blue-100 {
+    color: var(--mf-color-blue-100);
+}
+
+.mf-color-blue-700 {
+    color: var(--mf-color-blue-700);
+}
+
+.mf-color-blue-900 {
+    color: var(--mf-color-blue-900);
+}
+
+.mf-color-red {
+    color: var(--mf-color-red);
+}
+
+.mf-color-white {
+    color: var(--mf-color-white);
+}
+
+.mf-color-black {
+    color: var(--mf-color-black);
+}
+
+.mf-color-gray {
+    color: var(--mf-color-gray);
+}
+
+.mf-color-gray-100 {
+    color: var(--mf-color-gray-100);
+}
+
+.mf-color-gray-200 {
+    color: var(--mf-color-gray-200);
+}
+
+.mf-color-gray-300 {
+    color: var(--mf-color-gray-300);
+}
+
+.mf-color-gray-400 {
+    color: var(--mf-color-gray-400);
+}
+
+.mf-color-gray-500 {
+    color: var(--mf-color-gray-500);
+}
+
+.mf-color-gray-600 {
+    color: var(--mf-color-gray-600);
+}
+
+.mf-bg-blue {
+    background-color: var(--mf-color-blue);
+}
+
+.mf-bg-blue-100 {
+    background-color: var(--mf-color-blue-100);
+}
+
+.mf-bg-blue-700 {
+    background-color: var(--mf-color-blue-700);
+}
+
+.mf-bg-blue-900 {
+    background-color: var(--mf-color-blue-900);
+}
+
+.mf-bg-red {
+    background-color: var(--mf-color-red);
+}
+
+.mf-bg-white {
+    background-color: var(--mf-color-white);
+}
+
+.mf-bg-black {
+    background-color: var(--mf-color-black);
+}
+
+.mf-bg-gray {
+    background-color: var(--mf-color-gray);
+}
+
+.mf-bg-gray-100 {
+    background-color: var(--mf-color-gray-100);
+}
+
+.mf-bg-gray-200 {
+    background-color: var(--mf-color-gray-200);
+}
+
+.mf-bg-gray-300 {
+    background-color: var(--mf-color-gray-300);
+}
+
+.mf-bg-gray-400 {
+    background-color: var(--mf-color-gray-400);
+}
+
+.mf-bg-gray-500 {
+    background-color: var(--mf-color-gray-500);
+}
+
+.mf-bg-gray-600 {
+    background-color: var(--mf-color-gray-600);
+}
+
+.mf-hover-color-red:hover,
+.mf-hover-color-red:active,
+.mf-hover-color-red:focus {
+    color: var(--mf-color-red);
+}
+
+.mf-hover-color-blue:hover,
+.mf-hover-color-blue:active,
+.mf-hover-color-blue:focus {
+    color: var(--mf-color-blue);
+}
+
+.mf-fill-white {
+    fill: white;
+}
+
+.mf-hover-fill-red:hover,
+.mf-hover-fill-red:active,
+.mf-hover-fill-red:focus {
+    fill: var(--mf-color-red);
+}
