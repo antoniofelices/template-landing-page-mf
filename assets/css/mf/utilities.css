@@ -34,10 +34,10 @@
     .mf-sm-hide {
         display: none !important;
     }
-    
+
     .mf-sm-show {
         display: initial !important;
-    } 
+    }
 }
 
 @media screen and (min-width: 1200px) {

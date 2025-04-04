@@ -24,7 +24,7 @@
 }
 
 .mf-grid-column-1-s-5 {
-    grid-column: 1/span 5;
+    grid-column: 1 / span 5;
 }
 
 @media screen and (min-width: 1200px) {
@@ -49,15 +49,15 @@
         grid-column: 2/3;
     }
     .mf-grid-column-1-s-4 {
-        grid-column: 1/span 4;
+        grid-column: 1 / span 4;
     }
     .mf-lg-grid-column-2-6 {
         grid-column: 2/6;
     }
     .mf-lg-grid-column-5-s-2 {
-        grid-column: 5/span 2;
+        grid-column: 5 / span 2;
     }
     .mf-lg-grid-column-6-s-1 {
-        grid-column: 6/span 1;
+        grid-column: 6 / span 1;
     }
 }

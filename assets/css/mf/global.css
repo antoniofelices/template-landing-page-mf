@@ -9,7 +9,9 @@ body {
     line-height: var(--mf-line-height-base);
 }
 
-p, ul, ol {
+p,
+ul,
+ol {
     font-size: var(--mf-font-size-base);
     line-height: var(--mf-line-height-base);
 }
@@ -25,13 +27,13 @@ summary:focus {
     outline: none;
 }
 summary:after {
-    content: url("../images/icon-arrow-blue.svg");
+    content: url('../images/icon-arrow-blue.svg');
 }
 details[open] summary {
     border-block-end: none;
 }
 details[open] summary:after {
     transform: rotate(180deg);
-    content: url("../images/icon-arrow-red.svg");
-    transition: transform .25s ease-in-out;
+    content: url('../images/icon-arrow-red.svg');
+    transition: transform 0.25s ease-in-out;
 }

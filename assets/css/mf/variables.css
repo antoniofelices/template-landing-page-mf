@@ -38,7 +38,7 @@
     --mf-color-gray-700: #0f0f10;
 
     /* Typography */
-    --mf-font-family-sans-serif: "Proxima Nova", sans-serif;
+    --mf-font-family-sans-serif: 'Proxima Nova', sans-serif;
 
     --mf-font-size-xs: 0.79rem;
     --mf-font-size-sm: 0.889rem;
@@ -56,10 +56,10 @@
     --mf-font-weight-bold: 700;
 
     --mf-line-height-xs: 1;
-    --mf-line-height-sm: 1.20;
+    --mf-line-height-sm: 1.2;
     --mf-line-height-base: 1.45;
-    --mf-line-height-lg: 1.60;
-    
+    --mf-line-height-lg: 1.6;
+
     /* Spacing */
     --mf-spacing-0: 0;
     --mf-spacing-1: 0.25rem;

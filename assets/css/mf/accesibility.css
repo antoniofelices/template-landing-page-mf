@@ -4,29 +4,29 @@
 
 .mf-screen-reader {
     border: 0;
-	clip-path: inset(50%);
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute !important;
-	word-wrap: normal !important;
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    word-wrap: normal !important;
 }
 
-.mf-screen-reader:focus{
-	clip-path: none;
-	height: auto;
-	width: auto;
-	position: static;
-	display: block;
-	font-size: var(--mf-font-size-base);
-	color: var(--mf-color-black);
-	background: var(--mf-bg-white);
-	text-decoration: none;
-	box-shadow: 0px 2px var(--mf-spacing-1) var(--mf-color-gray-400);
+.mf-screen-reader:focus {
+    clip-path: none;
+    height: auto;
+    width: auto;
+    position: static;
+    display: block;
+    font-size: var(--mf-font-size-base);
+    color: var(--mf-color-black);
+    background: var(--mf-bg-white);
+    text-decoration: none;
+    box-shadow: 0px 2px var(--mf-spacing-1) var(--mf-color-gray-400);
 }
 
 :focus {
-	outline: 1px dotted var(--mf-color-gray-300);
+    outline: 1px dotted var(--mf-color-gray-300);
 }

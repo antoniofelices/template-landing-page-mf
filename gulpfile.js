@@ -1,5 +1,5 @@
-const { src, dest, watch, series } = require('gulp');
-const concat = require('gulp-concat');
+const { src, dest, watch, series } = require('gulp')
+const concat = require('gulp-concat')
 
 function styles() {
     return src([
@@ -17,15 +17,14 @@ function styles() {
         'assets/css/mf/borders.css',
         'assets/css/mf/border-radius.css',
         'assets/css/mf/shadows.css',
-        // 'assets/css/custom-variables.css',
-        'assets/css/custom.css'
+        'assets/css/custom.css',
     ])
-    .pipe(concat('main.css'))
-    .pipe(dest('assets/css'));
+        .pipe(concat('main.css'))
+        .pipe(dest('assets/css'))
 }
 
 function watchFiles() {
-    watch('assets/css/mf/*.css', styles);
+    watch('assets/css/mf/*.css', styles)
 }
 
-exports.default = series(styles, watchFiles);
+exports.default = series(styles, watchFiles)

@@ -485,12 +485,11 @@
         margin-block: var(--mf-spacing-8);
     }
     .mf-sm-margin-inline-8 {
-        margin-inline: var(--mf-spacing-8)
+        margin-inline: var(--mf-spacing-8);
     }
 }
 
 @media screen and (min-width: 1200px) {
-
     /* Width */
     .mf-lg-max-width-50vh {
         max-width: 50vh;
@@ -541,15 +540,15 @@
     .mf-lg-gap-4 {
         gap: var(--mf-spacing-4);
     }
-    
+
     .mf-lg-gap-5 {
         gap: var(--mf-spacing-5);
     }
-    
+
     .mf-lg-gap-6 {
         gap: var(--mf-spacing-6);
     }
-    
+
     .mf-lg-gap-7 {
         gap: var(--mf-spacing-7);
     }
